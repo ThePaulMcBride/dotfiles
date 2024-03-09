@@ -7,7 +7,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
@@ -31,7 +31,7 @@ vim.keymap.set('n', '<C-p>', builtin.find_files, {})
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
-local config = require("nvim-treesitter.config")
+local config = require("nvim-treesitter.configs")
 config.setup({
   ensure_installed = { "typescript", "javascript", "json", "yaml", "html", "css", "lua", "go", "rust" },
   highlight = { enable = true },
@@ -39,4 +39,4 @@ config.setup({
 })
 
 require("catppuccin").setup()
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("catppuccin-macchiato")
