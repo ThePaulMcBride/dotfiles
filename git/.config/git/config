@@ -28,6 +28,8 @@
   autocorrect = 1
 [push]
   default = current
+[pull]
+  rebase = false
 [branch "master"]
   remote = origin
   merge = refs/heads/master
