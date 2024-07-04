@@ -39,6 +39,8 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 # Keybindings
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey "^[[A" history-beginning-search-backward #up
+bindkey "^[[B" history-beginning-search-forward #down
 bindkey '^[w' kill-region
 
 # History
