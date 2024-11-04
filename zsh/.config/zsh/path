@@ -1,13 +1,6 @@
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
-export PATH="$PATH:/opt/yarn-[version]/bin"
-export PATH="$PATH:`yarn global bin`"
 export PATH="/usr/local/opt/v8@3.15/bin:$PATH"
 
-# fnm
-FNM_PATH="/Users/paul/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/Users/paul/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi

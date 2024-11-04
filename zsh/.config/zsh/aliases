@@ -18,5 +18,3 @@ alias glol="git log --graph --oneline --decorate"
 alias la="ls -lac"
 alias ll="ls -lc"
 
-alias dots="chezmoi"
-alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
