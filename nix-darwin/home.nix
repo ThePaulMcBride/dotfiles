@@ -15,7 +15,7 @@
   ];
 
   home.file = {
-    # ".config/alacritty".source = ../alacritty;
+    ".config/alacritty".source = ../alacritty;
     ".config/git".source = ../git;
     ".config/nix-darwin".source = ../nix-darwin;
     ".config/nvim".source = ../nvim;
