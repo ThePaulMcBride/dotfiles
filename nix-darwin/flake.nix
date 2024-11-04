@@ -33,6 +33,7 @@
             pkgs.helix
             pkgs.imagemagick
             pkgs.lazygit
+            pkgs.nerdfonts
             pkgs.nodejs_22
             pkgs.oh-my-posh
             pkgs.ripgrep
@@ -72,12 +73,6 @@
           ];
         };
 
-        fonts.packages =
-          [
-            (pkgs.nerdfonts.override {
-              fonts = [ "JetBrainsMono" ];
-            })
-          ];
 
         system.activationScripts.applications.text =
           let
