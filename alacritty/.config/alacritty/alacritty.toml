@@ -17,7 +17,6 @@ option_as_alt = "Both"
 
 [font]
 normal.family = "MonaspiceAr Nerd Font Mono"
-
 size = 16
 
 [general]

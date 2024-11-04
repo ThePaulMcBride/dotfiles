@@ -14,3 +14,5 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# Set shell
+export SHELL=/bin/zsh
