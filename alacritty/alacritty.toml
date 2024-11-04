@@ -16,7 +16,7 @@ decorations = "Buttonless"
 option_as_alt = "Both"
 
 [font]
-normal.family = "JetBrainsMono"
+normal.family = "JetBrainsMonoNF"
 size = 16
 
 [general]
