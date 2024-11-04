@@ -1,3 +1,3 @@
 # Dotfiles
 
-Clone this repo into the home directory. With GNU Stow installed, run `stow <directory>` to symlink the dotfiles to the home directory. If you want to symlink all of the dotfiles, run `stow *`.
+Clone this repo into the home directory. With Nix and Nix Darwind installed, run `darwin-rebuild switch --flake ~/dotfiles/nix-darwin`.
