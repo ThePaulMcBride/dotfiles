@@ -75,7 +75,7 @@
         fonts.packages =
           [
             (pkgs.nerdfonts.override {
-              fonts = [ "JetBrainsMono" ];
+              fonts = [ "JetBrainsMono" "Monaspace" ];
             })
           ];
 
