@@ -136,23 +136,19 @@
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
-              # Install Homebrew under the default prefix
               enable = true;
-
-              # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
               enableRosetta = true;
-
-              # User owning the Homebrew prefix
               user = "paul";
             };
           }
           home-manager.darwinModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.paul = import ./home.nix;
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.paul = import ./home.nix;
+            };
           }
-
         ];
       };
 

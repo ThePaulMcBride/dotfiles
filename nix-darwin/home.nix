@@ -5,29 +5,25 @@
   # paths it should manage.
   home.username = "paul";
   home.homeDirectory = "/Users/paul";
+  home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  home.stateVersion = "24.05";
 
   # Packages that should be installed to the user profile.
   home.packages = [
   ];
 
   home.file = {
-    #   ".zshenv".source = ~/dotfiles/zsh/.zshenv;
-    #   ".config/zsh/.zshrc".source = ~/dotfiles/zsh/.zshrc;
-    #   ".config/zsh/aliases".source = ~/dotfiles/zsh/aliases;
-    ".config/zsh/path".source = ~/dotfiles/zsh/path;
+    # ".config/alacritty".source = ../alacritty;
+    ".config/git".source = ../git;
+    ".config/nix-darwin".source = ../nix-darwin;
+    ".config/nvim".source = ../nvim;
+    ".config/ohmyposh".source = ../ohmyposh;
+    ".config/zellij".source = ../zellij;
+    ".zshenv".source = ../zsh/.zshenv;
+    ".config/zsh/.zshrc".source = ../zsh/.zshrc;
+    ".config/zsh/aliases".source = ../zsh/aliases;
+    ".config/zsh/path".source = ../zsh/path;
   };
 }
