@@ -21,6 +21,7 @@
         # $ nix-env -qaP | grep wget
         environment.systemPackages =
           [
+            pkgs._1password-cli
             pkgs.neovim
             pkgs.mkalias
             pkgs.alacritty
