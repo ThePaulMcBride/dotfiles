@@ -6,9 +6,13 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
     let
       configuration = { pkgs, config, ... }: {
         nixpkgs.config.allowUnfree = true;
@@ -21,6 +25,25 @@
             pkgs.mkalias
             pkgs.alacritty
             pkgs.obsidian
+            pkgs.fd
+            pkgs.fnm
+            pkgs.fzf
+            pkgs.git
+            pkgs.go
+            pkgs.helix
+            pkgs.imagemagick
+            pkgs.lazygit
+            pkgs.nodejs_22
+            pkgs.oh-my-posh
+            pkgs.ripgrep
+            pkgs.stow
+            pkgs.stripe-cli
+            pkgs.tree
+            pkgs.yarn
+            pkgs.zellij
+            pkgs.zoxide
+            pkgs.zsh
+            pkgs.zsh-completions
           ];
 
         homebrew = {
@@ -45,25 +68,7 @@
             "zoom"
           ];
           brews = [
-            "fd"
-            "fnm"
-            "fzf"
-            "git"
-            "go"
-            "helix"
-            "imagemagick"
-            "lazygit"
-            "node"
-            "oh-my-posh"
-            "ripgrep"
             "stow"
-            # "stripe/stripe-cli/stripe"
-            "tree"
-            "yarn"
-            "zellij"
-            "zoxide"
-            "zsh"
-            "zsh-completions"
           ];
         };
 
@@ -96,6 +101,11 @@
             done
           '';
 
+        users.users.paul.home = "/Users/paul";
+        home-manager.backupFileExtension = "backup";
+        nix.configureBuildUsers = true;
+        nix.useDaemon = true;
+
         # Auto upgrade nix package and the daemon service.
         services.nix-daemon.enable = true;
         # nix.package = pkgs.nix;
@@ -126,14 +136,17 @@
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
-              # Install Homebrew under the default prefix
               enable = true;
-
-              # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
               enableRosetta = true;
-
-              # User owning the Homebrew prefix
               user = "paul";
+            };
+          }
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.paul = import ./home.nix;
             };
           }
         ];
