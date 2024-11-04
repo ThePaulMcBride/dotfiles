@@ -59,6 +59,7 @@
             "discord"
             "docker"
             "firefox"
+            "font-jetbrains-mono-nerd-font"
             "postman"
             "raycast"
             "slack"
@@ -72,12 +73,6 @@
           ];
         };
 
-        fonts.packages =
-          [
-            (pkgs.nerdfonts.override {
-              fonts = [ "JetBrainsMono" "Monaspace" ];
-            })
-          ];
 
         system.activationScripts.applications.text =
           let
