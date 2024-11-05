@@ -25,6 +25,7 @@
             pkgs.neovim
             pkgs.mkalias
             pkgs.alacritty
+            pkgs.cargo
             pkgs.obsidian
             pkgs.fd
             pkgs.fnm
@@ -121,6 +122,17 @@
 
         # The platform the configuration will be used on.
         nixpkgs.hostPlatform = "aarch64-darwin";
+
+        security.pam.enableSudoTouchIdAuth = true;
+
+        system.defaults = {
+          dock.autohide = true;
+          dock.mru-spaces = false;
+          finder.AppleShowAllExtensions = true;
+          NSGlobalDomain.InitialKeyRepeat = 10;
+          NSGlobalDomain.KeyRepeat = 2;
+        };
+
       };
     in
     {
