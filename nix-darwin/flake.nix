@@ -133,6 +133,11 @@
           NSGlobalDomain.KeyRepeat = 2;
         };
 
+        system.keyboard = {
+          enableKeyMapping = true;
+          remapCapsLockToEscape = true;
+        };
+
       };
     in
     {
