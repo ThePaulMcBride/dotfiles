@@ -17,4 +17,5 @@ alias glo="git log --pretty='oneline'"
 alias glol="git log --graph --oneline --decorate"
 alias la="ls -lac"
 alias ll="ls -lc"
-
+alias darwin-switch="darwin-rebuild switch --flake ~/dotfiles/nix-darwin#home"
+alias nix-update="pushd ~/dotfiles/nix-darwin; nix flake update; darwin-switch; popd"

@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ config, username, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "paul";
-  home.homeDirectory = "/Users/paul";
+  home.username = username;
+  home.homeDirectory = "/Users/${username}";
   home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
