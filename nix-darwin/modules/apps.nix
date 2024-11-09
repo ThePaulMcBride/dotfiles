@@ -7,8 +7,8 @@
   ##########################################################################
 
   environment.systemPackages = with pkgs; [
-    neovim
     alacritty
+    bat
     cargo
     obsidian
     fd
@@ -19,6 +19,7 @@
     helix
     imagemagick
     lazygit
+    neovim
     nodejs_22
     oh-my-posh
     ripgrep
