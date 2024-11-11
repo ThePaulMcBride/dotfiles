@@ -62,7 +62,14 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color'
+alias ls="exa"
+alias l="ls -lbF"
+alias ll="ls -la"
+alias llm="ll --sort=modified"
+alias la="ls -lbhHigUmuSa"
+alias lx="ls -lbhHigUmuSa@"
+alias tree="exa --tree"
+alias lS="exa -1"
 alias vim='nvim'
 alias c='clear'
 alias cat="bat"

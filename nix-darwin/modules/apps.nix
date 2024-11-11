@@ -10,6 +10,7 @@
     alacritty
     bat
     cargo
+    eza
     obsidian
     fd
     fnm
@@ -24,7 +25,6 @@
     oh-my-posh
     ripgrep
     stripe-cli
-    tree
     yarn
     zellij
     zoxide
