@@ -23,7 +23,6 @@
     ".config/zellij".source = ../zellij;
     ".zshenv".source = ../zsh/.zshenv;
     ".config/zsh/.zshrc".source = ../zsh/.zshrc;
-    ".config/zsh/aliases".source = ../zsh/aliases;
     ".config/zsh/path".source = ../zsh/path;
   };
 }

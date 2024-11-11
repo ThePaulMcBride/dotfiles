@@ -1,4 +1,3 @@
-source $ZDOTDIR/aliases
 source $ZDOTDIR/path
 
 if [[ -f "/opt/homebrew/bin/brew" ]] then
@@ -66,6 +65,9 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
+alias cat="bat"
+alias darwin-switch="darwin-rebuild switch --flake ~/dotfiles/nix-darwin#home; source ~/.config/zsh/.zshrc"
+alias nix-update="pushd ~/dotfiles/nix-darwin; nix flake update; darwin-switch; popd"
 
 # Shell integrations
 eval "$(fzf --zsh)"
