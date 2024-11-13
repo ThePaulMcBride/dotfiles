@@ -21,7 +21,6 @@
     imagemagick
     lazygit
     neovim
-    nodejs_22
     oh-my-posh
     ripgrep
     stripe-cli
