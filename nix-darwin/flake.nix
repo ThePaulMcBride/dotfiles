@@ -29,33 +29,78 @@
         };
     in
     {
-      darwinConfigurations."home" = darwin.lib.darwinSystem {
-        inherit system specialArgs;
-        modules = [
-          ./modules/nix-core.nix
-          ./modules/system.nix
-          ./modules/apps.nix
-          ./modules/host-users.nix
+      darwinConfigurations = {
+        "home" = darwin.lib.darwinSystem {
+          inherit system;
 
-          # homebrew
-          homebrew.darwinModules.nix-homebrew
-          {
-            nix-homebrew = {
-              enable = true;
-              enableRosetta = true;
-              user = "paul";
+          specialArgs =
+            inputs
+            // {
+              inherit username useremail;
+              host = "home";
             };
-          }
+          modules = [
+            ./modules/nix-core.nix
+            ./modules/system.nix
+            ./modules/apps.nix
+            ./modules/host-users.nix
 
-          # home manager
-          home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = specialArgs;
-            home-manager.users.${username} = import ./home.nix;
-          }
-        ];
+            # homebrew
+            homebrew.darwinModules.nix-homebrew
+            {
+              nix-homebrew = {
+                enable = true;
+                enableRosetta = true;
+                user = "paul";
+              };
+            }
+
+            # home manager
+            home-manager.darwinModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.users.${username} = import ./home.nix;
+            }
+          ];
+        };
+
+        "work" = darwin.lib.darwinSystem {
+          inherit system;
+
+          specialArgs =
+            inputs
+            // {
+              inherit username useremail;
+              host = "work";
+            };
+          modules = [
+            ./modules/nix-core.nix
+            ./modules/system.nix
+            ./modules/apps.nix
+            ./modules/host-users.nix
+
+            # homebrew
+            homebrew.darwinModules.nix-homebrew
+            {
+              nix-homebrew = {
+                enable = true;
+                enableRosetta = true;
+                user = "paul";
+              };
+            }
+
+            # home manager
+            home-manager.darwinModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = specialArgs;
+              home-manager.users.${username} = import ./home.nix;
+            }
+          ];
+        };
       };
     };
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, specialArgs, ... }: {
 
   ##########################################################################
   # 
@@ -31,6 +31,8 @@
     zsh
     zsh-completions
   ];
+
+
   environment.variables.EDITOR = "nvim";
 
   homebrew = {
@@ -65,6 +67,6 @@
       "visual-studio-code"
       "zed"
       "zoom"
-    ];
+    ] ++ (if (specialArgs.host == "home") then [ "steam" ] else (if (specialArgs.host == "work") then [ "google-chrome" ] else [ ]));
   };
 }
