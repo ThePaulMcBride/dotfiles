@@ -24,7 +24,6 @@
     oh-my-posh
     ripgrep
     stripe-cli
-    yarn
     zellij
     zoxide
     zsh
@@ -66,6 +65,6 @@
       "visual-studio-code"
       "zed"
       "zoom"
-    ] ++ (if (specialArgs.host == "home") then [ "steam" ] else (if (specialArgs.host == "work") then [ "google-chrome" ] else [ ]));
+    ];
   };
 }

@@ -31,19 +31,14 @@
     {
       darwinConfigurations = {
         "home" = darwin.lib.darwinSystem {
-          inherit system;
+          inherit system specialArgs;
 
-          specialArgs =
-            inputs
-            // {
-              inherit username useremail;
-              host = "home";
-            };
           modules = [
             ./modules/nix-core.nix
             ./modules/system.nix
             ./modules/apps.nix
             ./modules/host-users.nix
+            ./modules/home.nix
 
             # homebrew
             homebrew.darwinModules.nix-homebrew
@@ -67,19 +62,14 @@
         };
 
         "work" = darwin.lib.darwinSystem {
-          inherit system;
+          inherit system specialArgs;
 
-          specialArgs =
-            inputs
-            // {
-              inherit username useremail;
-              host = "work";
-            };
           modules = [
             ./modules/nix-core.nix
             ./modules/system.nix
             ./modules/apps.nix
             ./modules/host-users.nix
+            ./modules/work.nix
 
             # homebrew
             homebrew.darwinModules.nix-homebrew
