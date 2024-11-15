@@ -10,6 +10,7 @@
     ];
 
     casks = [
+      "asana"
       "google-chrome"
       "google-cloud-sdk"
     ];
