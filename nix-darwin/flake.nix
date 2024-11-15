@@ -18,6 +18,29 @@
 
   outputs = inputs @ { self, nixpkgs, darwin, home-manager, homebrew, ... }:
     let
+
+      sharedModules = [
+        # homebrew
+        homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            enable = true;
+            enableRosetta = true;
+            user = "paul";
+          };
+        }
+
+        # home manager
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = specialArgs;
+          home-manager.users.${username} = import ./home.nix;
+        }
+
+      ];
+
       username = "paul";
       useremail = "hello@paulmcbride.com";
       system = "aarch64-darwin";
@@ -39,26 +62,7 @@
             ./modules/apps.nix
             ./modules/host-users.nix
             ./modules/home.nix
-
-            # homebrew
-            homebrew.darwinModules.nix-homebrew
-            {
-              nix-homebrew = {
-                enable = true;
-                enableRosetta = true;
-                user = "paul";
-              };
-            }
-
-            # home manager
-            home-manager.darwinModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = specialArgs;
-              home-manager.users.${username} = import ./home.nix;
-            }
-          ];
+          ] ++ sharedModules;
         };
 
         "work" = darwin.lib.darwinSystem {
@@ -69,9 +73,10 @@
             ./modules/system.nix
             ./modules/apps.nix
             ./modules/host-users.nix
-            ./modules/shared.nix
             ./modules/work.nix
-          ];
+
+
+          ] ++ sharedModules;
         };
       };
     };
