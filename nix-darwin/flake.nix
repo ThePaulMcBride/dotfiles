@@ -69,26 +69,8 @@
             ./modules/system.nix
             ./modules/apps.nix
             ./modules/host-users.nix
+            ./modules/shared.nix
             ./modules/work.nix
-
-            # homebrew
-            homebrew.darwinModules.nix-homebrew
-            {
-              nix-homebrew = {
-                enable = true;
-                enableRosetta = true;
-                user = "paul";
-              };
-            }
-
-            # home manager
-            home-manager.darwinModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = specialArgs;
-              home-manager.users.${username} = import ./home.nix;
-            }
           ];
         };
       };
