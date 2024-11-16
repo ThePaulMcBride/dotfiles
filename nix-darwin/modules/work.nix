@@ -13,6 +13,7 @@
       "asana"
       "google-chrome"
       "google-cloud-sdk"
+      "loom"
     ];
   };
 }
