@@ -78,6 +78,7 @@ alias gcm="git commit -m"
 alias gp="git push"
 alias gpl="git pull"
 alias gl="git log"
+alias gg="lazygit"
 alias vim='nvim'
 alias c='clear'
 alias cat="bat"
