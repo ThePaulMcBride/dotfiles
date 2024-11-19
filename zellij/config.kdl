@@ -1,1 +1,4 @@
-theme "catppuccin-macchiato"
+theme "catppuccin-macchiato";
+simplified_ui true;
+pane_frames true;
+non_colliding_default_keybinds true;
