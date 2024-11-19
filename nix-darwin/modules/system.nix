@@ -75,6 +75,7 @@
       NSGlobalDomain = {
         "com.apple.swipescrolldirection" = true; # enable natural scrolling(default to true)
         "com.apple.sound.beep.feedback" = 0; # disable beep sound when pressing volume up/down key
+        "com.apple.trackpad.scaling" = 2.0; # increase default trackpad speed
         AppleKeyboardUIMode = 3; # Mode 3 enables full keyboard control.
 
         # sets how long it takes before it starts repeating.
