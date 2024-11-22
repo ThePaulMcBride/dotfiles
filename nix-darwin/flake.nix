@@ -26,6 +26,7 @@
             enable = true;
             enableRosetta = true;
             user = "paul";
+            autoMigrate = true;
           };
         }
         home-manager.darwinModules.home-manager
