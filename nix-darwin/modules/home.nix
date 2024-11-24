@@ -1,11 +1,14 @@
-{ pkgs, specialArgs, ... }: {
+{ pkgs, specialArgs, ... }:
+{
 
-  environment.systemPackages = [
-  ];
+  environment.systemPackages =
+    [
+    ];
 
   homebrew = {
-    brews = [
-    ];
+    brews =
+      [
+      ];
 
     casks = [
       "steam"

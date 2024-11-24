@@ -1,4 +1,5 @@
-{ pkgs, specialArgs, ... }: {
+{ pkgs, specialArgs, ... }:
+{
 
   ##########################################################################
   # 
@@ -21,6 +22,7 @@
     imagemagick
     lazygit
     neovim
+    nixfmt-rfc-style
     oh-my-posh
     ripgrep
     stripe-cli
@@ -29,7 +31,6 @@
     zsh
     zsh-completions
   ];
-
 
   environment.variables.EDITOR = "nvim";
 
@@ -48,8 +49,9 @@
       "homebrew/services"
     ];
 
-    brews = [
-    ];
+    brews =
+      [
+      ];
 
     casks = [
       "1password"

@@ -8,11 +8,19 @@
   home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true;
+    # nixvim = {
+    #   enable = true;
+    #   colorschemes.catppuccin.enable = true;
+    #   plugins.lualine.enable = true;
+    # };
+  };
 
   # Packages that should be installed to the user profile.
-  home.packages = [
-  ];
+  home.packages =
+    [
+    ];
 
   home.file = {
     ".config/alacritty".source = ../alacritty;

@@ -1,7 +1,10 @@
-{ pkgs, specialArgs, ... }: {
+{ pkgs, specialArgs, ... }:
+{
 
-  environment.systemPackages = with pkgs; [
-  ];
+  environment.systemPackages =
+    with pkgs;
+    [
+    ];
 
   homebrew = {
     brews = [

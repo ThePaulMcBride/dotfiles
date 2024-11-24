@@ -16,7 +16,15 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, home-manager, homebrew, ... }:
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      darwin,
+      home-manager,
+      homebrew,
+      ...
+    }:
     let
 
       sharedModules = [
@@ -42,11 +50,9 @@
       useremail = "hello@paulmcbride.com";
       system = "aarch64-darwin";
 
-      specialArgs =
-        inputs
-        // {
-          inherit username useremail;
-        };
+      specialArgs = inputs // {
+        inherit username useremail;
+      };
     in
     {
       darwinConfigurations = {
