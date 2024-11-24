@@ -1,12 +1,13 @@
 { pkgs, specialArgs, ... }: {
 
-  environment.systemPackages = [
+  environment.systemPackages = with pkgs; [
   ];
 
   homebrew = {
     brews = [
       "nvm"
-      "neofetch"
+      "rbenv"
+      "ruby-build"
     ];
 
     casks = [
