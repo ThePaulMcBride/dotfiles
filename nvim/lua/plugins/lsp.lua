@@ -1,8 +1,6 @@
 return {
-  "stevearc/conform.nvim",
+  "neovim/nvim-lspconfig",
   opts = {
-    formatters_by_ft = {
-      nix = { "nixfmt" },
-    },
+    inlay_hints = { enabled = false },
   },
 }
