@@ -1,4 +1,4 @@
 theme "catppuccin-macchiato";
-simplified_ui true;
+simplified_ui false;
 pane_frames true;
 non_colliding_default_keybinds true;
