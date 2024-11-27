@@ -15,3 +15,4 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export SHELL=/run/current-system/sw/bin/zsh
+export EDITOR=nvim
