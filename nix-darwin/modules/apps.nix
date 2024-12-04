@@ -10,7 +10,6 @@
   environment.systemPackages = with pkgs; [
     alacritty
     bat
-    cargo
     eza
     obsidian
     fd
@@ -25,6 +24,7 @@
     nixfmt-rfc-style
     oh-my-posh
     ripgrep
+    rustup
     stripe-cli
     zellij
     zoxide
