@@ -55,6 +55,7 @@
 
     brews = [
       "libpq"
+      "libyaml"
     ];
 
     casks = [
