@@ -1,16 +1,14 @@
-{ pkgs, specialArgs, ... }:
+{ pkgs, ... }:
 {
 
-  environment.systemPackages =
-    with pkgs;
-    [
-    ];
+  # environment.systemPackages =
+  #   with pkgs;
+  #   [
+  #   ];
 
   homebrew = {
     brews = [
       "nvm"
-      "rbenv"
-      "ruby-build"
     ];
 
     casks = [

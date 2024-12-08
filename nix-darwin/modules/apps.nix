@@ -1,4 +1,4 @@
-{ pkgs, specialArgs, ... }:
+{ pkgs, ... }:
 {
 
   ##########################################################################
@@ -10,8 +10,9 @@
   environment.systemPackages = with pkgs; [
     alacritty
     bat
+    capnproto
+    cargo
     eza
-    obsidian
     fd
     fnm
     fzf
@@ -20,9 +21,12 @@
     helix
     imagemagick
     lazygit
+    mise
     neovim
     nixfmt-rfc-style
+    obsidian
     oh-my-posh
+    protobuf
     ripgrep
     rustup
     stripe-cli
@@ -49,9 +53,9 @@
       "homebrew/services"
     ];
 
-    brews =
-      [
-      ];
+    brews = [
+      "libpq"
+    ];
 
     casks = [
       "1password"
