@@ -1,14 +1,16 @@
 { pkgs, ... }:
 {
 
-  # environment.systemPackages =
-  #   with pkgs;
-  #   [
-  #   ];
+  environment.systemPackages = with pkgs; [
+    capnproto
+  ];
 
   homebrew = {
     brews = [
+      "gcc"
+      "imagemagick"
       "nvm"
+      "pkgconf"
     ];
 
     casks = [
