@@ -1,4 +1,4 @@
-{ pkgs, specialArgs, ... }:
+{ ... }:
 {
 
   environment.systemPackages =
