@@ -53,10 +53,9 @@
       "homebrew/services"
     ];
 
-    brews = [
-      "libpq"
-      "libyaml"
-    ];
+    brews =
+      [
+      ];
 
     casks = [
       "1password"

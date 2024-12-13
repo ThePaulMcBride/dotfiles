@@ -11,6 +11,8 @@
     brews = [
       "gcc"
       "imagemagick"
+      "libpq"
+      "libyaml"
       "nvm"
       "pkgconf"
       "python@3.12"
