@@ -96,6 +96,7 @@ eval "$(fnm completions --shell zsh)"
 eval "$(mise activate zsh)"
 
 # Load gcloud completions and path
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
+test -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" && source "$_"
+test -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" && source "$_"
+# source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+# source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
