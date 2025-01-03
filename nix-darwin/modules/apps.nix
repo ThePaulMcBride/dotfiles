@@ -2,7 +2,7 @@
 {
 
   ##########################################################################
-  # 
+  #
   #  Install all apps and packages here.
   #
   ##########################################################################
@@ -53,9 +53,8 @@
       "homebrew/services"
     ];
 
-    brews =
-      [
-      ];
+    brews = [
+    ];
 
     casks = [
       "1password"
@@ -64,6 +63,7 @@
       "docker"
       "firefox"
       "font-jetbrains-mono-nerd-font"
+      "ghostty"
       "postman"
       "raycast"
       "slack"
