@@ -18,15 +18,18 @@
   };
 
   # Packages that should be installed to the user profile.
-  home.packages =
-    [
-    ];
+  home.packages = [
+  ];
 
   home.file = {
     ".config/alacritty".source = ../alacritty;
     ".config/git".source = ../git;
-    ".config/nix-darwin".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nix-darwin";
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nvim";
+    ".config/nix-darwin".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nix-darwin";
+    ".config/nvim".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nvim";
+    ".config/ghostty".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/ghostty";
     ".config/ohmyposh".source = ../ohmyposh;
     ".config/zellij".source = ../zellij;
     ".zshenv".source = ../zsh/.zshenv;
