@@ -1,0 +1,7 @@
+theme = catppuccin-macchiato
+font-size = 16
+font-family = JetBrainsMono Nerd Font
+title = " "
+macos-titlebar-proxy-icon = hidden
+window-decoration = false
+command = /run/current-system/sw/bin/zsh
