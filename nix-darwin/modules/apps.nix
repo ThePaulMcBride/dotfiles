@@ -31,6 +31,7 @@
     ripgrep
     rustup
     stripe-cli
+    yazi
     zellij
     zoxide
     zsh
