@@ -11,6 +11,8 @@
     brews = [
       "gcc"
       "imagemagick"
+      "helm"
+      "helmfile"
       "libpq"
       "libyaml"
       "nvm"
