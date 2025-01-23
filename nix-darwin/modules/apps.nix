@@ -20,6 +20,7 @@
     go
     helix
     imagemagick
+    lazydocker
     lazygit
     mise
     neovim
