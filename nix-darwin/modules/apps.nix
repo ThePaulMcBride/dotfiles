@@ -56,6 +56,7 @@
     ];
 
     brews = [
+      "helm"
     ];
 
     casks = [
