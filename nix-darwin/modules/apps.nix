@@ -57,6 +57,7 @@
 
     brews = [
       "helm"
+      "helmfile"
     ];
 
     casks = [
