@@ -16,6 +16,7 @@
       "libpq"
       "libyaml"
       "nvm"
+      "parallel"
       "pkgconf"
       "python@3.12"
     ];
