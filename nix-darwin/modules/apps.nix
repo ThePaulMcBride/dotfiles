@@ -11,7 +11,6 @@
     alacritty
     bat
     capnproto
-    cargo
     eza
     fd
     fnm
