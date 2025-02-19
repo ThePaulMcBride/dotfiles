@@ -72,6 +72,7 @@
       "tableplus"
       "visual-studio-code"
       "zed"
+      "zen-browser"
       "zoom"
     ];
   };
