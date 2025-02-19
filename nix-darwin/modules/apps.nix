@@ -55,6 +55,7 @@
     ];
 
     brews = [
+      "gh"
     ];
 
     casks = [
