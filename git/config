@@ -1,3 +1,7 @@
+[url "ssh://git@github.com/"]
+  insteadOf = github.com/
+[url "ssh://git@github.com/"]
+    insteadOf = github.com/
 [credential]
   helper = cache --timeout 3600
 [alias]
@@ -36,7 +40,7 @@
   merge = refs/heads/master
 [core]
   excludesfile = ~/.gitignore_global
-  editor = code
+  editor = nvim
   ignorecase = false
 [user]
   name = Paul McBride
@@ -52,5 +56,3 @@
   gpgsign = true
 [rerere]
   enabled = true
-[url "git@github.com:"]
-    insteadOf = https://github.com/
