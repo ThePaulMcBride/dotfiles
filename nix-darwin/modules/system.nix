@@ -80,7 +80,7 @@
 
         # sets how long it takes before it starts repeating.
         InitialKeyRepeat = 10; # normal minimum is 15 (225 ms), maximum is 120 (1800 ms)
-        # sets how fast it repeats once it starts. 
+        # sets how fast it repeats once it starts.
         KeyRepeat = 2; # normal minimum is 2 (30 ms), maximum is 120 (1800 ms)
 
         NSNavPanelExpandedStateForSaveMode = true; # expand save panel by default
@@ -90,7 +90,7 @@
       # Customize settings that not supported by nix-darwin directly
       # see the source code of this project to get more undocumented options:
       #    https://github.com/rgcr/m-cli
-      # 
+      #
       # All custom entries can be found by running `defaults read` command.
       # or `defaults read xxx` to read a specific domain.
       CustomUserPreferences = {
@@ -154,7 +154,7 @@
   };
 
   # Add ability to used TouchID for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   # this is required if you want to use darwin's default shell - zsh
