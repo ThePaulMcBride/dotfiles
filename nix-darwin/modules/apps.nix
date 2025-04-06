@@ -21,7 +21,6 @@
     imagemagick
     lazydocker
     lazygit
-    mise
     neovim
     nixfmt-rfc-style
     obsidian
@@ -55,6 +54,7 @@
     ];
 
     brews = [
+      "mise"
       "gh"
     ];
 
