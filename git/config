@@ -13,6 +13,8 @@
   lg = log -p
   changelog = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative --abbrev-commit --graph
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  cleanup-dry-run = !git fetch -p && git branch -vv | grep ': gone]'
+  cleanup = !git fetch -p && git branch -vv | grep ': gone]' | awk '{print \\$1}' | xargs git branch -D
 [branch]
   sort = -committerdate
 [color]
