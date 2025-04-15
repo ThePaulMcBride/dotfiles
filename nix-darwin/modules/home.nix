@@ -1,14 +1,13 @@
 { ... }:
 {
 
-  environment.systemPackages =
-    [
-    ];
+  environment.systemPackages = [
+  ];
 
   homebrew = {
-    brews =
-      [
-      ];
+    brews = [
+      "talosctl"
+    ];
 
     casks = [
       "calibre"
