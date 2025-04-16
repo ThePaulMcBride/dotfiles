@@ -54,6 +54,7 @@
     ];
 
     brews = [
+      "bacon"
       "mise"
       "gh"
     ];

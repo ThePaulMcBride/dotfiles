@@ -9,6 +9,7 @@
 
   homebrew = {
     brews = [
+      "circleci"
       "gcc"
       "graphviz"
       "imagemagick"
