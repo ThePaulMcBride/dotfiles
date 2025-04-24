@@ -57,6 +57,7 @@
       "bacon"
       "mise"
       "gh"
+      "k9s"
     ];
 
     casks = [
