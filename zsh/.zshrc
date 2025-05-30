@@ -82,9 +82,8 @@ alias gg="lazygit"
 alias vim='nvim'
 alias c='clear'
 alias cat="bat"
-alias darwin-switch="darwin-rebuild switch --flake ~/dotfiles/nix-darwin#home; source ~/.config/zsh/.zshrc"
-alias "darwin-switch-home"="darwin-switch"
-alias "darwin-switch-work"="darwin-rebuild switch --flake ~/dotfiles/nix-darwin#work; source ~/.config/zsh/.zshrc"
+alias "darwin-switch-home"="sudo darwin-rebuild switch --flake ~/dotfiles/nix-darwin#home; source ~/.config/zsh/.zshrc"
+alias "darwin-switch-work"="sudo darwin-rebuild switch --flake ~/dotfiles/nix-darwin#work; source ~/.config/zsh/.zshrc"
 alias nix-update="pushd ~/dotfiles/nix-darwin; nix --extra-experimental-features 'flakes nix-command' flake update; popd"
 alias refresh="source ~/.config/zsh/.zshrc"
 
