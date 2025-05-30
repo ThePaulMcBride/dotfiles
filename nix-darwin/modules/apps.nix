@@ -58,6 +58,7 @@
       "mise"
       "gh"
       "k9s"
+      "watch"
     ];
 
     casks = [
@@ -74,7 +75,7 @@
       "tableplus"
       "visual-studio-code"
       "zed"
-      "zen-browser"
+      "zen"
       "zoom"
     ];
   };
