@@ -6,8 +6,12 @@ export PATH="/usr/local/opt/v8@3.15/bin:$PATH"
 export PATH="$HOME/.local/share/mise/shims:$PATH"
 
 
+# enable commit signing using 1 password
+export PATH="/Applications/1Password.app/Contents/MacOS:$PATH"
+
 # kubectl use gke auth
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # set gcloud sdk python version
 export CLOUDSDK_PYTHON='/opt/homebrew/bin/python3.12'
+
