@@ -189,6 +189,17 @@
     zoxide
   ];
 
+
+  # Fonts
+  fonts = {
+    packages = with pkgs; [
+      nerd-fonts.symbols-only
+      nerd-fonts.fira-code
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.iosevka
+    ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions. programs.mtr.enable = true;
   # programs.gnupg.agent = {
