@@ -2,17 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   imports = [
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
   ];
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -20,13 +16,11 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.extraModprobeConfig = ''options bluetooth disable_ertm=1 '';
+  boot.extraModprobeConfig = "options bluetooth disable_ertm=1 ";
 
   hardware = {
     enableAllFirmware = true;
-    graphics = {
-      enable = true;
-    };
+    graphics = { enable = true; };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
@@ -37,9 +31,7 @@
           FastConnectable = "true";
           Experimental = "true";
         };
-        Policy = {
-          AutoEnable = "true";
-        };
+        Policy = { AutoEnable = "true"; };
       };
     };
     xpadneo.enable = true;
@@ -114,11 +106,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  services.udev = {
-    packages = with pkgs; [
-      game-devices-udev-rules
-    ];
-  };
+  services.udev = { packages = with pkgs; [ game-devices-udev-rules ]; };
 
   users.defaultUserShell = pkgs.zsh;
 
@@ -126,12 +114,8 @@
   users.users.paul = {
     isNormalUser = true;
     description = "Paul McBride";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-    packages = with pkgs; [
-    ];
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [ ];
   };
 
   programs.firefox.enable = true;
@@ -140,8 +124,10 @@
 
   programs.steam = {
     enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    remotePlay.openFirewall =
+      true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall =
+      true; # Open ports in the firewall for Source Dedicated Server
     gamescopeSession.enable = true;
   };
 
@@ -188,7 +174,6 @@
     yarn
     zoxide
   ];
-
 
   # Fonts
   fonts = {
