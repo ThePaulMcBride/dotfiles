@@ -13,6 +13,9 @@
     };
     homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
+    nix-ld = {
+      url = "github:nix-community/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -39,9 +42,10 @@
           inherit specialArgs;
           system = "x86_64-linux";
           modules = [
-	          ./hosts/argon
-	          ./modules/home-manager.nix
-	        ];
+            ./hosts/argon
+            ./modules/home-manager.nix
+            { programs.nix-ld.enable = true; }
+          ];
         };
       };
 
