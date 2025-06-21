@@ -3,5 +3,7 @@ font-size = 16
 font-family = JetBrainsMono Nerd Font
 title = " "
 macos-titlebar-proxy-icon = hidden
-window-decoration = false
+macos-titlebar-style = hidden
+window-decoration = auto
 command = /run/current-system/sw/bin/zsh
+

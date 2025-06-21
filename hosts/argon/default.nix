@@ -76,9 +76,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system
-  services.xserver = {
-    enable = true;
+  services = {
     displayManager.gdm = {
       enable = true;
       wayland = true;
@@ -91,11 +89,6 @@
         experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling']
       '';
     };
-    xkb = {
-      layout = "us";
-      variant = "";
-    };
-
   };
 
   # Enable CUPS to print documents.
@@ -127,6 +120,8 @@
     ];
   };
 
+  users.defaultUserShell = pkgs.zsh;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.paul = {
     isNormalUser = true;
@@ -140,6 +135,8 @@
   };
 
   programs.firefox.enable = true;
+
+  programs.zsh.enable = true;
 
   programs.steam = {
     enable = true;
@@ -166,19 +163,30 @@
   environment.systemPackages = with pkgs; [
     appimage-run
     azahar
+    bat
     brave
     cemu
+    eza
+    fzf
     gearlever
+    gcc
     ghostty
+    go
     git
+    lazygit
     lact
     lutris
     mangohud
     melonDS
     mgba
     neovim
+    nodejs
+    oh-my-posh
     ryujinx
+    rustup
     steam-rom-manager
+    unzip
+    zoxide
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

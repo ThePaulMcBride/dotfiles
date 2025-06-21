@@ -62,14 +62,14 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls="exa"
+alias ls="eza"
 alias l="ls -lbF"
 alias ll="ls -la"
 alias llm="ll --sort=modified"
 alias la="ls -lbhHigUmuSa"
 alias lx="ls -lbhHigUmuSa@"
-alias tree="exa --tree"
-alias lS="exa -1"
+alias tree="eza --tree"
+alias lS="eza -1"
 alias gs="git status"
 alias ga="git add"
 alias gaa="git add ."
@@ -86,6 +86,7 @@ alias "darwin-switch"="sudo darwin-rebuild switch --flake ~/dotfiles#; source ~/
 alias "darwin-switch-home"="sudo darwin-rebuild switch --flake ~/dotfiles#carbon; source ~/.config/zsh/.zshrc"
 alias "darwin-switch-work"="sudo darwin-rebuild switch --flake ~/dotfiles/#neon; source ~/.config/zsh/.zshrc"
 alias nix-update="pushd ~/dotfiles; nix --extra-experimental-features 'flakes nix-command' flake update; popd"
+alias "nix-switch"="sudo nixos-rebuild switch --flake ~/dotfiles# --impure; source ~/.config/zsh/.zshrc"
 alias refresh="source ~/.config/zsh/.zshrc"
 
 # Shell integrations
