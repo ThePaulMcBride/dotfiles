@@ -2,7 +2,7 @@
   description = "Nix for macOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs = { url = "github:nixos/nixpkgs/nixpkgs-unstable"; };
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,32 +11,20 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    homebrew = {
-      url = "github:zhaofengli-wip/nix-homebrew";
+    homebrew = { url = "github:zhaofengli-wip/nix-homebrew"; };
     nix-ld = {
       url = "github:nix-community/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs =
-    inputs@{
-      self,
-      nixpkgs,
-      darwin,
-      home-manager,
-      homebrew,
-      ...
-    }:
+  outputs = inputs@{ self, nixpkgs, darwin, home-manager, homebrew, ... }:
     let
       username = "paul";
       useremail = "hello@paulmcbride.com";
 
-      specialArgs = inputs // {
-        inherit username useremail;
-      };
-    in
-    {
+      specialArgs = inputs // { inherit username useremail; };
+    in {
       nixosConfigurations = {
         "argon" = nixpkgs.lib.nixosSystem {
           inherit specialArgs;
