@@ -32,7 +32,7 @@
       powerOnBoot = true;
       settings = {
         General = {
-          Name = "Hello";
+          Name = "Argon";
           ControllerMode = "dual";
           FastConnectable = "true";
           Experimental = "true";
