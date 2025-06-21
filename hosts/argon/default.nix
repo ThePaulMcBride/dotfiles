@@ -176,12 +176,12 @@
     lutris
     mangohud
     melonDS
+    mise
     mgba
     neovim
     nodejs
     oh-my-posh
     ryujinx
-    rustup
     steam-rom-manager
     unzip
     zoxide
