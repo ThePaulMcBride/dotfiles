@@ -184,6 +184,7 @@
     ryujinx
     steam-rom-manager
     unzip
+    yarn
     zoxide
   ];
 
