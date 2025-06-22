@@ -172,6 +172,7 @@
     unzip
     wl-clipboard
     yarn
+    zellij
     zoxide
   ];
 
