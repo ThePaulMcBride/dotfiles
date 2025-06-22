@@ -1,5 +1,4 @@
-{ ... }:
-{
+{ ... }: {
   imports = [
     ../../modules/nix-core.nix
     ../../modules/nix-darwin.nix
@@ -7,6 +6,7 @@
     ../../modules/host-users.nix
     ../../modules/nix-homebrew.nix
     ../../modules/home-manager-darwin.nix
+    ../../modules/fonts.nix
     ../../modules/work.nix
   ];
 }
