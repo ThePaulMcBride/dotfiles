@@ -92,10 +92,20 @@ alias refresh="source ~/.config/zsh/.zshrc"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(fnm env --use-on-cd --shell zsh)"
-eval "$(fnm completions --shell zsh)"
-eval "$(mise activate zsh)"
 
-# Load gcloud completions and path
-test -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" && source "$_"
-test -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" && source "$_"
+if [ -x "$(command -v fnm)" ]; then
+  eval "$(fnm env --use-on-cd --shell zsh)"
+  eval "$(fnm completions --shell zsh)"
+fi
+
+
+if [ -x "$(command -v mise)" ]; then
+  eval "$(mise activate zsh)"
+fi
+
+
+if [ -x "$(command -v brew)" ]; then
+  # Load gcloud completions and path
+  test -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" && source "$_"
+  test -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" && source "$_"
+fi
