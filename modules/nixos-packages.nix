@@ -6,6 +6,7 @@
     brave
     cemu
     eza
+    fastfetch
     fzf
     gearlever
     gcc
