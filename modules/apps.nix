@@ -63,7 +63,7 @@
         "1password"
         "brave-browser"
         "discord"
-        "docker"
+        "docker-desktop"
         "firefox"
         "font-jetbrains-mono-nerd-font"
         "ghostty"
