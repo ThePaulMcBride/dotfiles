@@ -18,22 +18,22 @@
   };
 
   # Packages that should be installed to the user profile.
-  home.packages = [
-  ];
+  home.packages = [ ];
 
   home.file = {
     ".config/alacritty".source = ../dotfiles/alacritty;
     ".config/git".source = ../dotfiles/git;
-    ".config/nix-darwin".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
-    ".config/nvim".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
-    ".config/ghostty".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty";
+    ".config/nix-darwin".source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
+    ".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty";
     ".config/ohmyposh".source = ../dotfiles/ohmyposh;
     ".config/zellij".source = ../dotfiles/zellij;
     ".zshenv".source = ../dotfiles/zsh/.zshenv;
     ".config/zsh/.zshrc".source = ../dotfiles/zsh/.zshrc;
     ".config/zsh/path".source = ../dotfiles/zsh/path;
+    ".config/helix".source = ../dotfiles/helix;
   };
 }
