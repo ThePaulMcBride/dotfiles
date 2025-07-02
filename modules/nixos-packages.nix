@@ -13,6 +13,7 @@
     ghostty
     go
     git
+    helix
     lazygit
     lact
     lutris
@@ -23,7 +24,7 @@
     neovim
     nodejs
     oh-my-posh
-    ryujinx
+    ryubing
     steam-rom-manager
     unzip
     wl-clipboard
