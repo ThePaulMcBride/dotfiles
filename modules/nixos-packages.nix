@@ -24,6 +24,7 @@
     neovim
     nodejs
     oh-my-posh
+    rustup
     ryubing
     steam-rom-manager
     unzip
