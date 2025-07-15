@@ -13,10 +13,12 @@
     ghostty
     go
     git
+    handbrake
     helix
     lazygit
     lact
     lutris
+    makemkv
     mangohud
     melonDS
     mise
