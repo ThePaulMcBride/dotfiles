@@ -8,6 +8,7 @@
     ../../modules/nixos-hardware.nix
     ../../modules/nixos-services.nix
     ../../modules/nixos-packages.nix
+    # ../../modules/syncthing.nix
     ../../modules/fonts.nix
   ];
 
