@@ -1,18 +1,5 @@
 { pkgs, ... }: {
   services = {
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-    };
-    desktopManager.gnome = {
-      enable = true;
-      extraGSettingsOverridePackages = [ pkgs.mutter ];
-      extraGSettingsOverrides = ''
-        [org.gnome.mutter]
-        experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling']
-      '';
-    };
-    printing.enable = true;
     udev.packages = with pkgs; [ game-devices-udev-rules ];
     pipewire = {
       enable = true;

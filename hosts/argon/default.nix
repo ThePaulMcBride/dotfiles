@@ -10,6 +10,8 @@
     ../../modules/nixos-packages.nix
     ../../modules/syncthing.nix
     ../../modules/fonts.nix
+    ../../modules/kde.nix
+    ../../modules/gc.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -57,5 +59,4 @@
   # documentation for this option (e.g. man configuration.nix or on
   # https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
