@@ -10,7 +10,7 @@
     ../../modules/nixos-packages.nix
     ../../modules/syncthing.nix
     ../../modules/fonts.nix
-    ../../modules/kde.nix
+    ../../modules/gnome.nix
     ../../modules/gc.nix
   ];
 
