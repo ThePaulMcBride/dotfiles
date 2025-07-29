@@ -108,4 +108,7 @@ if [ -x "$(command -v brew)" ]; then
   # Load gcloud completions and path
   test -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" && source "$_"
   test -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" && source "$_"
+  
+  test -f "$(brew --prefix)/share/gcloud-cli/path.zsh.inc" && source "$_"
+  test -f "$(brew --prefix)/share/gcloud-cli/completion.zsh.inc" && source "$_"
 fi
