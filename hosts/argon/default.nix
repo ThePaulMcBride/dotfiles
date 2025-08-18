@@ -12,13 +12,14 @@
     ../../modules/fonts.nix
     ../../modules/gnome.nix
     ../../modules/gc.nix
+    ../../modules/openrgb.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "argon"; # Define your hostname.
-  # networking.wireless.enable = true; # Enables wireless support via
-  # wpa_supplicant.
+  # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true;
 
   # Configure network proxy if necessary networking.proxy.default =
   # "http://user:password@proxy:port/"; networking.proxy.noProxy =
