@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
+    adwsteamgtk
     appimage-run
     azahar
     bat
@@ -26,6 +27,7 @@
     neovim
     nodejs
     oh-my-posh
+    transmission_4-gtk
     rustup
     ryubing
     steam-rom-manager
