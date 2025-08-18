@@ -14,7 +14,6 @@
       "graphviz"
       "imagemagick"
       "helm"
-      "helmfile"
       "libpq"
       "libsodium"
       "libyaml"
@@ -24,6 +23,7 @@
       "postgresql@15"
       "protobuf"
       "python@3.12"
+      "stern"
     ];
 
     casks = [
