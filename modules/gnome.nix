@@ -11,11 +11,11 @@
     };
     desktopManager.gnome = {
       enable = true;
-      extraGSettingsOverridePackages = [ pkgs.mutter ];
       extraGSettingsOverrides = ''
         [org.gnome.mutter]
         experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling']
       '';
     };
   };
+  programs.hyprland.enable = true;
 }
