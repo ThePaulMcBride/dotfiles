@@ -30,7 +30,6 @@
       "asana"
       "google-chrome"
       "gcloud-cli"
-      "loom"
     ];
   };
 }
