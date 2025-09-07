@@ -26,10 +26,10 @@
     mgba
     neovim
     nodejs
-    oh-my-posh
     transmission_4-gtk
     rustup
     ryubing
+    starship
     steam-rom-manager
     unzip
     wl-clipboard

@@ -33,7 +33,7 @@ autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(starship init zsh)"
 
 # Keybindings
 bindkey '^p' history-search-backward

@@ -22,7 +22,7 @@
       "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
     ".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink
       "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty";
-    ".config/ohmyposh".source = ../dotfiles/ohmyposh;
+    ".config/starship.toml".source = ../dotfiles/starship/starship.toml;
     ".config/zellij".source = ../dotfiles/zellij;
     ".zshenv".source = ../dotfiles/zsh/.zshenv;
     ".config/zsh/.zshrc".source = ../dotfiles/zsh/.zshrc;

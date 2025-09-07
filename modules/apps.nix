@@ -1,8 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-{
+{ pkgs, ... }: {
 
   config = {
     environment.systemPackages = with pkgs; [
@@ -22,10 +18,10 @@
       neovim
       nixfmt-rfc-style
       obsidian
-      oh-my-posh
       protobuf
       ripgrep
       rustup
+      starship
       stripe-cli
       yazi
       zellij
@@ -47,17 +43,9 @@
 
       masApps = { };
 
-      taps = [
-        "homebrew/services"
-      ];
+      taps = [ "homebrew/services" ];
 
-      brews = [
-        "bacon"
-        "mise"
-        "gh"
-        "k9s"
-        "watch"
-      ];
+      brews = [ "bacon" "mise" "gh" "k9s" "watch" ];
 
       casks = [
         "1password"
