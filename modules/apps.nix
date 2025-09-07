@@ -13,6 +13,7 @@
       go
       helix
       imagemagick
+      jujutsu
       lazydocker
       lazygit
       neovim
