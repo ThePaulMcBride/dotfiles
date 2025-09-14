@@ -7,3 +7,4 @@ macos-titlebar-style = hidden
 window-decoration = auto
 command = /run/current-system/sw/bin/zsh
 
+config-file = ?linux-config
