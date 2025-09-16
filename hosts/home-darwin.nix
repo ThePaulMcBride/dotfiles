@@ -23,12 +23,11 @@
   home.file = {
     ".config/alacritty".source = ../dotfiles/alacritty;
     ".config/git".source = ../dotfiles/git;
-    ".config/nix-darwin".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
-    ".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty";
+    ".config/nix-darwin".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
+    ".config/nvim".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
+    ".config/ghostty/config".source = ../dotfiles/ghostty/config;
     ".config/starship.toml".source = ../dotfiles/starship/starship.toml;
     ".config/zellij".source = ../dotfiles/zellij;
     ".zshenv".source = ../dotfiles/zsh/.zshenv;
