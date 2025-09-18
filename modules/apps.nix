@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   config = {
     environment.systemPackages = with pkgs; [
@@ -24,6 +25,7 @@
       rustup
       starship
       stripe-cli
+      tree-sitter
       yazi
       zellij
       zoxide
@@ -46,7 +48,13 @@
 
       taps = [ "homebrew/services" ];
 
-      brews = [ "bacon" "mise" "gh" "k9s" "watch" ];
+      brews = [
+        "bacon"
+        "mise"
+        "gh"
+        "k9s"
+        "watch"
+      ];
 
       casks = [
         "1password"
