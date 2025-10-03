@@ -6,6 +6,7 @@
     bat
     brave
     cemu
+    discord
     eza
     fastfetch
     fzf
