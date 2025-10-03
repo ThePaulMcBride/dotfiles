@@ -49,7 +49,7 @@
   users.users.paul = {
     isNormalUser = true;
     description = "Paul McBride";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" ];
   };
 
   # This value determines the NixOS release from which the default
