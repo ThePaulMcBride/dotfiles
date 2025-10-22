@@ -1,4 +1,9 @@
-{ config, username, ... }:
+{
+  config,
+  username,
+  pkgs,
+  ...
+}:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -18,7 +23,9 @@
   };
 
   # Packages that should be installed to the user profile.
-  home.packages = [ ];
+  home.packages = with pkgs; [
+    (writeShellScriptBin "kd" (builtins.readFile ../scripts/kd.sh))
+  ];
 
   home.file = {
     ".config/alacritty".source = ../dotfiles/alacritty;
