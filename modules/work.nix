@@ -24,6 +24,8 @@
       "protobuf"
       "python@3.12"
       "stern"
+      "terraform"
+      "terragrunt"
     ];
 
     casks = [
