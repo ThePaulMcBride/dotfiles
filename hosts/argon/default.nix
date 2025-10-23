@@ -13,6 +13,7 @@
     ../../modules/gnome.nix
     ../../modules/gc.nix
     ../../modules/openrgb.nix
+    ../../modules/niri.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

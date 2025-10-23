@@ -28,5 +28,6 @@
     ".config/zsh/.zshrc".source = ../dotfiles/zsh/.zshrc;
     ".config/zsh/path".source = ../dotfiles/zsh/path;
     ".config/helix".source = ../dotfiles/helix;
+    ".config/niri/config.kdl".source = ../dotfiles/niri/config.kdl;
   };
 }
