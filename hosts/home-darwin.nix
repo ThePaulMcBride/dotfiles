@@ -1,9 +1,4 @@
-{
-  config,
-  username,
-  pkgs,
-  ...
-}:
+{ config, username, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -23,20 +18,20 @@
   };
 
   # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    (writeShellScriptBin "kd" (builtins.readFile ../scripts/kd.sh))
-  ];
+  home.packages = with pkgs;
+    [ (writeShellScriptBin "kd" (builtins.readFile ../scripts/kd.sh)) ];
 
   home.file = {
     ".config/alacritty".source = ../dotfiles/alacritty;
     ".config/git".source = ../dotfiles/git;
-    ".config/nix-darwin".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
-    ".config/nvim".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
+    ".config/jj".source = ../dotfiles/jj;
+    ".config/nix-darwin".source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
     ".config/ghostty/config".source = ../dotfiles/ghostty/config;
-    ".config/ghostty/themes".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty/themes";
+    ".config/ghostty/themes".source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty/themes";
     ".config/starship.toml".source = ../dotfiles/starship/starship.toml;
     ".config/zellij".source = ../dotfiles/zellij;
     ".zshenv".source = ../dotfiles/zsh/.zshenv;
