@@ -28,6 +28,11 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
+
+if [ -x "$(command -v jj)" ]; then
+  source <(COMPLETE=zsh jj)
+fi
+
 # Load completions
 autoload -Uz compinit && compinit
 
