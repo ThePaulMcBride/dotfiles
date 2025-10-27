@@ -17,6 +17,7 @@
     git
     handbrake
     helix
+    jujutsu
     lazygit
     lact
     lutris
