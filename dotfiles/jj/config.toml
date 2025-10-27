@@ -1,3 +1,6 @@
 [user]
 name = "Paul McBride"
 email = "hello@paulmcbride.com"
+
+[ui]
+paginate = "never"
