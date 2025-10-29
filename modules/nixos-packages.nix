@@ -36,6 +36,7 @@
     unzip
     wl-clipboard
     yarn
+    yazi
     zellij
     zoxide
   ];
