@@ -19,6 +19,7 @@
     handbrake
     helix
     jujutsu
+    kind
     kubectl
     lazygit
     lact
