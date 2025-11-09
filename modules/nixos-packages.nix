@@ -19,6 +19,7 @@
     handbrake
     helix
     jujutsu
+    kubectl
     lazygit
     lact
     lutris
