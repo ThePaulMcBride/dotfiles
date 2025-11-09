@@ -7,6 +7,7 @@
     brave
     cemu
     discord
+    docker
     eza
     fastfetch
     fzf
@@ -33,6 +34,7 @@
     ryubing
     starship
     steam-rom-manager
+    talosctl
     unzip
     wl-clipboard
     yarn
