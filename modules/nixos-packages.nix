@@ -10,6 +10,7 @@
     docker
     eza
     fastfetch
+    fluxcd
     fzf
     gearlever
     gcc
