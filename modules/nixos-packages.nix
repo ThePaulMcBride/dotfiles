@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     adwsteamgtk
     appimage-run
-    # azahar
+    azahar
     bat
     brave
     cemu
