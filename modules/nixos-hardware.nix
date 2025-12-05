@@ -23,7 +23,6 @@
         Policy = { AutoEnable = "true"; };
       };
     };
-    xpadneo.enable = true;
     steam-hardware.enable = true;
     uinput.enable = true;
   };
