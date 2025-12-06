@@ -24,6 +24,8 @@
     kubectl
     lazygit
     lact
+    lsfg-vk
+    lsfg-vk-ui
     lutris
     makemkv
     mangohud
