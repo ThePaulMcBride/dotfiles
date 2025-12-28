@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     adwsteamgtk
+    alsa-scarlett-gui
     appimage-run
     azahar
     bat
