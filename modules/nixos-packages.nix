@@ -36,6 +36,7 @@
     mgba
     neovim
     nodejs
+    opencode
     transmission_4-gtk
     rustup
     ryubing
