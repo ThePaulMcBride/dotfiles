@@ -3,6 +3,8 @@
 
   environment.systemPackages = with pkgs; [
     capnproto
+    claude-code
+    opencode
     kubectl
     kubectx
   ];
