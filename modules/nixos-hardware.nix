@@ -7,6 +7,14 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.extraModprobeConfig = "options bluetooth disable_ertm=1 ";
 
+  systemd.services.lact = {
+    description = "AMDGPU Control Daemon";
+    after = [ "multi-user.target" ];
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = { ExecStart = "${pkgs.lact}/bin/lact daemon"; };
+    enable = true;
+  };
+
   hardware = {
     enableAllFirmware = true;
     graphics = { enable = true; };
