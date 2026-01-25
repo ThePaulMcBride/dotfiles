@@ -40,7 +40,6 @@
     opencode
     transmission_4-gtk
     rustup
-    ryubing
     starship
     steam-rom-manager
     talosctl
