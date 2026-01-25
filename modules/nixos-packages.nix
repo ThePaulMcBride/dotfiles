@@ -18,7 +18,7 @@
     ghostty
     go
     git
-    handbrake
+    # handbrake
     helix
     jujutsu
     just
