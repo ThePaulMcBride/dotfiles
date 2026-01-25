@@ -36,6 +36,7 @@
     mgba
     neovim
     nodejs
+    ollama-rocm
     opencode
     transmission_4-gtk
     rustup
