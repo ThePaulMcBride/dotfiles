@@ -16,7 +16,8 @@
   home.file = {
     ".config/alacritty".source = ../dotfiles/alacritty;
     ".config/git".source = ../dotfiles/git;
-    ".config/jj".source = ../dotfiles/jj;
+    ".config/jj".source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/dotfiles/jj";
     ".config/nix-darwin".source = config.lib.file.mkOutOfStoreSymlink
       "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
