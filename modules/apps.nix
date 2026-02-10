@@ -18,7 +18,7 @@
       lazydocker
       lazygit
       neovim
-      nixfmt-rfc-style
+      nixfmt
       obsidian
       protobuf
       ripgrep
