@@ -10,25 +10,39 @@ Nix flake-based system configuration managing three machines:
 
 ## Prerequisites
 
-1. Install [Nix](https://nixos.org/download/)
-2. Install [Homebrew](https://brew.sh/)
-3. Install and configure [1Password](https://1password.com/) with SSH agent integration enabled (required for cloning this repo via SSH)
+1. Install [Nix](https://determinate.systems/nix-installer/) using the Determinate installer
+
+Homebrew, 1Password, and all other dependencies are installed automatically during the first build.
 
 ## Fresh macOS Setup
 
-Clone this repo into the home directory:
+1. Clone this repo via HTTPS (SSH isn't available yet on a fresh machine):
 
-```sh
-git clone git@github.com:ThePaulMcBride/dotfiles.git ~/dotfiles
-```
+   ```sh
+   git clone https://github.com/ThePaulMcBride/dotfiles.git ~/dotfiles
+   ```
 
-Run the initial build:
+2. Run the initial build:
 
-```sh
-nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --flake ~/dotfiles#<hostname>
-```
+   ```sh
+   nix run nix-darwin -- switch --flake ~/dotfiles#<hostname>
+   ```
 
-For example, `~/dotfiles#carbon` for the personal Mac or `~/dotfiles#neon` for the work Mac.
+   For example, `~/dotfiles#carbon` for the personal Mac or `~/dotfiles#neon` for the work Mac.
+
+3. Open 1Password, sign in, and enable the SSH agent (Settings > Developer > SSH Agent). The git config rewrites all GitHub HTTPS URLs to SSH and enables commit signing via `op-ssh-sign`, so 1Password must be configured before the next step.
+
+4. Run the build again to ensure everything completes cleanly with SSH available:
+
+   ```sh
+   sudo darwin-rebuild switch --flake ~/dotfiles#<hostname>
+   ```
+
+5. Switch the repo remote to SSH:
+
+   ```sh
+   git -C ~/dotfiles remote set-url origin git@github.com:ThePaulMcBride/dotfiles.git
+   ```
 
 ## Fresh NixOS Setup
 
