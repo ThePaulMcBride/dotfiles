@@ -46,7 +46,7 @@
 
       masApps = { };
 
-      taps = [ "homebrew/services" ];
+      taps = [ ];
 
       brews = [
         "bacon"
