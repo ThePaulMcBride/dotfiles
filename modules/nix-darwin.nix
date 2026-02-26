@@ -58,6 +58,17 @@
         autohide = true;
         show-recents = false; # disable recent apps
         mru-spaces = false;
+
+        # dock items
+        persistent-apps = [
+          "/Applications/Ghostty.app"
+          "/Applications/Firefox.app"
+          "/System/Applications/Mail.app"
+          "/System/Applications/Calendar.app"
+          "/Applications/Slack.app"
+          "/Applications/Asana.app"
+          "/Applications/Obsidian.app"
+        ];
       };
 
       # customize finder
