@@ -19,7 +19,7 @@
       lazygit
       neovim
       nixfmt
-      obsidian
+
       protobuf
       ripgrep
       rustup
@@ -72,6 +72,7 @@
         "zed"
         "zen"
         "zoom"
+        "obsidian"
       ];
     };
   };
