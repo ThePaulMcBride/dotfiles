@@ -34,6 +34,8 @@
     ];
 
     environment.variables.EDITOR = "nvim";
+    environment.variables.HOMEBREW_NO_ANALYTICS = "1";
+    environment.variables.HOMEBREW_NO_ENV_HINTS = "1";
 
     homebrew = {
       enable = true;
