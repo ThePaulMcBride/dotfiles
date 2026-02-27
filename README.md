@@ -10,9 +10,23 @@ Nix flake-based system configuration managing three machines:
 
 ## Prerequisites
 
-1. Install [Nix](https://determinate.systems/nix-installer/) using the Determinate installer
+### macOS
+
+1. Install Xcode from the Mac App Store
+2. Install Xcode Command Line Tools:
+
+   ```sh
+   xcode-select --install
+   ```
+
+3. Install [Nix](https://determinate.systems/nix-installer/) using the Determinate installer
 
 Homebrew, 1Password, and all other dependencies are installed automatically during the first build.
+
+### NixOS
+
+1. Boot the NixOS installer and complete the base installation
+2. Nix is already available as part of the OS
 
 ## Fresh macOS Setup
 
