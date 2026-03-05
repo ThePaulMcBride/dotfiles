@@ -48,19 +48,23 @@
 
       masApps = { };
 
-      taps = [ ];
+      taps = [ "marcus/tap" ];
 
       brews = [
         "bacon"
+        "marcus/tap/sidecar"
+        "marcus/tap/td"
         "mise"
         "gh"
         "k9s"
+        "tmux"
         "watch"
       ];
 
       casks = [
         "1password"
         "brave-browser"
+        "cap"
         "discord"
         "docker-desktop"
         "firefox"
