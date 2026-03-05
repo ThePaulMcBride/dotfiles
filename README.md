@@ -95,6 +95,9 @@ Create a secrets file at `~/.config/zsh/secrets`:
 # Asana Personal Access Token
 # Get yours at: https://app.asana.com/0/my-apps
 export ASANA_ACCESS_TOKEN="your-token-here"
+
+# Obsidian vault path (used by the Obsidian MCP server)
+export OBSIDIAN_VAULT_PATH="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Second Brain"
 ```
 
 This file is sourced automatically by `.zshrc` if it exists.

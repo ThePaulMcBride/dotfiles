@@ -8,9 +8,20 @@
       "environment": {
         "ASANA_ACCESS_TOKEN": "{env:ASANA_ACCESS_TOKEN}"
       }
+    },
+    "obsidian": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@mauricio.wolff/mcp-obsidian@latest",
+        "{env:OBSIDIAN_VAULT_PATH}"
+      ],
+      "enabled": true
     }
   },
   "tools": {
-    "asana_*": false
+    "asana_*": false,
+    "obsidian_*": false
   }
 }
