@@ -8,7 +8,9 @@
   home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
-  programs = { home-manager.enable = true; };
+  programs = {
+    home-manager.enable = true;
+  };
 
   # Packages that should be installed to the user profile.
   home.packages = [ ];
@@ -16,14 +18,14 @@
   home.file = {
     ".config/alacritty".source = ../dotfiles/alacritty;
     ".config/git".source = ../dotfiles/git;
-    ".config/jj".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/jj";
-    ".config/nix-darwin".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
-    ".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty";
+    ".config/jj".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/jj";
+    ".config/nix-darwin".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
+    ".config/nvim".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
+    ".config/ghostty".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty";
     ".config/starship.toml".source = ../dotfiles/starship/starship.toml;
     ".config/zellij".source = ../dotfiles/zellij;
     ".zshenv".source = ../dotfiles/zsh/.zshenv;
@@ -31,5 +33,10 @@
     ".config/zsh/path".source = ../dotfiles/zsh/path;
     ".config/helix".source = ../dotfiles/helix;
     ".config/niri/config.kdl".source = ../dotfiles/niri/config.kdl;
+    ".config/opencode/opencode.json".source = ../dotfiles/opencode/opencode.json;
+    ".config/opencode/agents".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/agents";
+    ".config/opencode/skills".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/skills";
   };
 }

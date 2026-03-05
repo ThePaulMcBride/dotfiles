@@ -1,5 +1,8 @@
 source $ZDOTDIR/path
 
+# Source secrets file if it exists (not tracked in git)
+[[ -f $ZDOTDIR/secrets ]] && source $ZDOTDIR/secrets
+
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled
   eval "$(/opt/homebrew/bin/brew shellenv)"

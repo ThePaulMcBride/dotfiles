@@ -1,4 +1,9 @@
-{ config, username, pkgs, ... }:
+{
+  config,
+  username,
+  pkgs,
+  ...
+}:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -18,26 +23,30 @@
   };
 
   # Packages that should be installed to the user profile.
-  home.packages = with pkgs;
-    [ (writeShellScriptBin "kd" (builtins.readFile ../scripts/kd.sh)) ];
+  home.packages = with pkgs; [ (writeShellScriptBin "kd" (builtins.readFile ../scripts/kd.sh)) ];
 
   home.file = {
     ".config/alacritty".source = ../dotfiles/alacritty;
     ".config/git".source = ../dotfiles/git;
-    ".config/jj".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/jj";
-    ".config/nix-darwin".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
+    ".config/jj".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/jj";
+    ".config/nix-darwin".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nix-darwin";
+    ".config/nvim".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/nvim";
     ".config/ghostty/config".source = ../dotfiles/ghostty/config;
-    ".config/ghostty/themes".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty/themes";
+    ".config/ghostty/themes".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/ghostty/themes";
     ".config/starship.toml".source = ../dotfiles/starship/starship.toml;
     ".config/zellij".source = ../dotfiles/zellij;
     ".zshenv".source = ../dotfiles/zsh/.zshenv;
     ".config/zsh/.zshrc".source = ../dotfiles/zsh/.zshrc;
     ".config/zsh/path".source = ../dotfiles/zsh/path;
     ".config/helix".source = ../dotfiles/helix;
+    ".config/opencode/opencode.json".source = ../dotfiles/opencode/opencode.json;
+    ".config/opencode/agents".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/agents";
+    ".config/opencode/skills".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/skills";
   };
 }
