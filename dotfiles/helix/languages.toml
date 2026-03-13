@@ -1,5 +1,6 @@
 [language-server.ruby-lsp]
-command = "ruby-lsp"
+command = "mise"
+args = ["x", "--", "ruby-lsp"]
 config = { diagnostics = true, formatting = true }
 
 [[language]]
