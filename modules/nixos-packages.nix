@@ -48,7 +48,6 @@
     wl-clipboard
     yarn
     yazi
-    zelda64recomp
     zellij
     zoxide
   ];
