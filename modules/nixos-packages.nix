@@ -43,6 +43,7 @@
     starship
     steam-rom-manager
     talosctl
+    thunderbird
     unzip
     wl-clipboard
     yarn
