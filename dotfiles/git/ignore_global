@@ -33,3 +33,7 @@ Session.vim
 
 # direnv bin files
 .direnv
+
+# mise local overrides
+mise.local.toml
+.mise.local.toml
