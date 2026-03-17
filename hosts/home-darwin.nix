@@ -48,5 +48,7 @@
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/agents";
     ".config/opencode/skills".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/skills";
+    ".config/opencode/rules".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/rules";
   };
 }
