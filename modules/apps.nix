@@ -15,6 +15,7 @@
       helix
       imagemagick
       jujutsu
+      kondo
       lazydocker
       lazygit
       neovim
