@@ -17,6 +17,26 @@
         "type": "github"
       }
     },
+    "catppuccin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774006048,
+        "narHash": "sha256-+TtsaoR/NIHRvL+yAiaeOUmXo2NLZMMndSt8pw+IRiY=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "230a8ce66ccbbf7109e8d0bc1276c7f636f99631",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -113,6 +133,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin": "catppuccin",
         "darwin": "darwin",
         "home-manager": "home-manager",
         "homebrew": "homebrew",
