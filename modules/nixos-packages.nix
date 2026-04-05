@@ -31,7 +31,7 @@
     lutris
     makemkv
     mangohud
-    melonDS
+    melonds
     mise
     mgba
     neovim
