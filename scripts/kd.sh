@@ -3,10 +3,21 @@
 set -euo pipefail
 
 usage="Usage: $(basename "$0") -e ENV [diff|apply] [HELMFILE_OPTS...]"
-helmfiles=(kubernetes/helmfile.y*ml)
-helmfile="${helmfiles[0]}"
+
+for candidate in \
+  kubernetes/helmfile.yaml \
+  kubernetes/helmfile.yml \
+  kubernetes/helmfile.yaml.gotmpl \
+  kubernetes/helmfile.yml.gotmpl; do
+  if [[ -f "$candidate" ]]; then
+    helmfile="$candidate"
+    break
+  fi
+done
+
+: "${helmfile:?Could not find a helmfile in kubernetes/}"
 branch="${GIT_COMMIT:-origin/main}"
-selector=""
+selector=()
 
 while getopts ":he:l:" opt; do
   case "$opt" in
@@ -18,7 +29,7 @@ while getopts ":he:l:" opt; do
     env="$OPTARG"
     ;;
   l)
-    selector="-l $OPTARG"
+    selector=(-l "$OPTARG")
     ;;
   \?)
     echo "Invalid option: -$OPTARG" >&2
@@ -47,4 +58,4 @@ echo "Revision: $GIT_COMMIT" >&2
 sleep 2
 
 set -x
-exec helmfile -f "$helmfile" -e "$env" "$selector" "$op" --context=3 "$@"
+exec helmfile -f "$helmfile" -e "$env" "${selector[@]}" "$op" --context=3 "$@"

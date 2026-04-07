@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
 
   environment.systemPackages = with pkgs; [
@@ -38,4 +38,11 @@
       "gcloud-cli"
     ];
   };
+
+  system.activationScripts.helmDiff.text = ''
+    if [ -x /opt/homebrew/bin/helm ] && ! sudo -u ${username} /opt/homebrew/bin/helm plugin list | ${pkgs.gnugrep}/bin/grep -q '^diff[[:space:]]'; then
+      sudo -u ${username} /opt/homebrew/bin/helm plugin install --verify=false https://github.com/databus23/helm-diff
+    fi
+  '';
+
 }
