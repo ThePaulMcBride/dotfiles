@@ -26,6 +26,7 @@
   home.packages = with pkgs; [ (writeShellScriptBin "kd" (builtins.readFile ../scripts/kd.sh)) ];
 
   home.file = {
+    ".claude/settings.json".source = ../dotfiles/claude/settings.json;
     ".config/alacritty".source = ../dotfiles/alacritty;
     ".config/git".source = ../dotfiles/git;
     ".config/jj".source =

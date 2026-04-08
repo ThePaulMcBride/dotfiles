@@ -16,6 +16,7 @@
   home.packages = [ ];
 
   home.file = {
+    ".claude/settings.json".source = ../dotfiles/claude/settings.json;
     ".config/alacritty".source = ../dotfiles/alacritty;
     ".config/git".source = ../dotfiles/git;
     ".config/jj".source =
