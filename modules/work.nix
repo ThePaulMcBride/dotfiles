@@ -36,6 +36,7 @@
       "asana"
       "google-chrome"
       "gcloud-cli"
+      "linear-linear"
     ];
   };
 
