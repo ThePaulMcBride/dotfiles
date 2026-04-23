@@ -79,12 +79,28 @@ nix-update           # Update flake inputs
 ## Structure
 
 ```
-dotfiles/          # Application configs (git, nvim, zsh, ghostty, etc.)
+dotfiles/          # Application configs (git, nvim, zsh, ghostty, pi, opencode, etc.)
 hosts/             # Per-machine host definitions
 modules/           # Reusable Nix modules
 scripts/           # Shell scripts installed via Home Manager
 flake.nix          # Flake entry point
 ```
+
+## Shared Agent Skills
+
+Cross-agent skills live in:
+
+```sh
+dotfiles/agents/skills
+```
+
+They are installed to:
+
+```sh
+~/.agents/skills
+```
+
+Pi consumes these directly, and other agent configs can reference or mirror them.
 
 ## Secrets
 

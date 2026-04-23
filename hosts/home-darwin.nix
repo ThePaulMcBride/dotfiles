@@ -51,5 +51,10 @@
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/skills";
     ".config/opencode/rules".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/opencode/rules";
+    ".pi/agent/settings.json".source = ../dotfiles/pi/agent/settings.json;
+    ".pi/agent/extensions".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/pi/agent/extensions";
+    ".agents/skills".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/dotfiles/agents/skills";
   };
 }

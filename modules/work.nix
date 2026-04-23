@@ -23,6 +23,7 @@
       "libyaml"
       "nvm"
       "parallel"
+      "pi-coding-agent"
       "pkgconf"
       "postgresql@15"
       "protobuf"
