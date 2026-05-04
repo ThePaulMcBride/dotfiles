@@ -21,6 +21,7 @@
       "libpq"
       "libsodium"
       "libyaml"
+      "linear"
       "nvm"
       "parallel"
       "pi-coding-agent"
@@ -38,6 +39,7 @@
       "google-chrome"
       "gcloud-cli"
       "linear"
+      "schpet/tap/linear"
     ];
   };
 
