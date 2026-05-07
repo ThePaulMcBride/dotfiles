@@ -28,7 +28,7 @@
     lact
     lsfg-vk
     lsfg-vk-ui
-    lutris
+    # lutris
     makemkv
     mangohud
     melonds
@@ -42,6 +42,7 @@
     rustup
     starship
     steam-rom-manager
+    stremio-linux-shell
     talosctl
     thunderbird
     unzip
