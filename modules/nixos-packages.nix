@@ -1,5 +1,7 @@
 { pkgs, ... }:
-let eden-emulator = pkgs.callPackage ../pkgs/eden-emulator.nix { };
+let
+  eden-emulator = pkgs.callPackage ../pkgs/eden-emulator.nix { };
+  zelda64recomp = pkgs.callPackage ../pkgs/zelda64recomp.nix { };
 in {
   environment.systemPackages = with pkgs; [
     adwsteamgtk
@@ -52,6 +54,7 @@ in {
     wl-clipboard
     yarn
     yazi
+    zelda64recomp
     zellij
     zoxide
   ];
