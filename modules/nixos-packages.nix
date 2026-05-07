@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let eden-emulator = pkgs.callPackage ../pkgs/eden-emulator.nix { };
+in {
   environment.systemPackages = with pkgs; [
     adwsteamgtk
     alsa-scarlett-gui
@@ -8,6 +10,7 @@
     brave
     cemu
     discord
+    eden-emulator
     docker
     eza
     fastfetch
