@@ -63,9 +63,11 @@ in {
   programs.zsh.enable = true;
   programs.steam = {
     enable = true;
+    extest.enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
+    extraPackages = with pkgs; [ hidapi ];
   };
   programs.gamemode.enable = true;
   programs._1password.enable = true;
@@ -73,6 +75,8 @@ in {
     enable = true;
     polkitPolicyOwners = [ "paul" ];
   };
+
+  hardware = { steam-hardware = { enable = true; }; };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
