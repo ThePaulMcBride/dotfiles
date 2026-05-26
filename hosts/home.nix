@@ -15,6 +15,12 @@
   # Packages that should be installed to the user profile.
   home.packages = [ ];
 
+  # Ensure CLI tools (ssh, ssh-add, ansible, etc.) use 1Password SSH agent
+  # consistently, instead of a distro-managed ssh-agent socket.
+  home.sessionVariables = {
+    SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";
+  };
+
   home.file = {
     ".claude/settings.json".source = ../dotfiles/claude/settings.json;
     ".config/alacritty".source = ../dotfiles/alacritty;
