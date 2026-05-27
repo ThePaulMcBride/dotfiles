@@ -16,7 +16,7 @@
   home-manager.users.${username} = {
     imports = [
       ../modules/catppuccin.nix
-      ../hosts/home-darwin.nix
+      ../modules/home/platform-darwin.nix
       catppuccin.homeModules.catppuccin
     ];
   };

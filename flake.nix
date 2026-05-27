@@ -49,11 +49,7 @@
         "argon" = nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           system = "x86_64-linux";
-          modules = [
-            ./hosts/argon
-            ./modules/home-manager.nix
-            { programs.nix-ld.enable = true; }
-          ];
+          modules = [ ./hosts/argon ];
         };
       };
 

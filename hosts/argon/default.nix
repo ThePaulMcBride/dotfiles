@@ -15,9 +15,11 @@
     ../../modules/openrgb.nix
     ../../modules/niri.nix
     ../../modules/docker.nix
+    ../../modules/home-manager.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  programs.nix-ld.enable = true;
 
   networking.hostName = "argon"; # Define your hostname.
   # Enables wireless support via wpa_supplicant.

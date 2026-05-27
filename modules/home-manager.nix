@@ -17,7 +17,7 @@
   home-manager.users.${username} = {
     imports = [
       ../modules/catppuccin.nix
-      ../hosts/home.nix
+      ../modules/home/platform-linux.nix
       catppuccin.homeModules.catppuccin
     ];
   };
