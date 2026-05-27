@@ -6,6 +6,8 @@
       alacritty
       bat
       capnproto
+      delta
+      difftastic
       eza
       fd
       fnm
