@@ -22,5 +22,8 @@
 
   nix.settings = {
     auto-optimise-store = true;
+    lint-url-literals = "warn";
+    lint-short-path-literals = "warn";
+    lint-absolute-path-literals = "warn";
   };
 }
