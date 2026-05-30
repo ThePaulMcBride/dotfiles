@@ -2,6 +2,8 @@
 let
   eden-emulator = pkgs.callPackage ../pkgs/eden-emulator.nix { };
   zelda64recomp = pkgs.callPackage ../pkgs/zelda64recomp.nix { };
+  nvd-gen-diff =
+    pkgs.writeShellScriptBin "nvd-gen-diff" (builtins.readFile ../scripts/nvd-gen-diff.sh);
 in {
   environment.systemPackages = with pkgs; [
     adwsteamgtk
@@ -41,6 +43,8 @@ in {
     mgba
     neovim
     nodejs
+    nvd
+    nvd-gen-diff
     ollama
     opencode
     transmission_4-gtk
