@@ -1,5 +1,12 @@
 { pkgs, ... }: {
   services = {
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      nssmdns6 = true;
+      openFirewall = true;
+    };
+
     udev.packages = with pkgs; [ game-devices-udev-rules ];
     udev.extraRules = ''
       # 2.4GHz/Dongle
