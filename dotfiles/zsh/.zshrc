@@ -100,12 +100,12 @@ alias vim='nvim'
 alias c="clear"
 alias cat="bat"
 alias k="kubectl"
-alias "darwin-switch"="sudo darwin-rebuild switch --flake ~/dotfiles#; source ~/.config/zsh/.zshrc"
-alias "darwin-switch-home"="sudo darwin-rebuild switch --flake ~/dotfiles#carbon; source ~/.config/zsh/.zshrc"
-alias "darwin-switch-work"="sudo darwin-rebuild switch --flake ~/dotfiles/#neon; source ~/.config/zsh/.zshrc"
+alias "darwin-switch"="sudo darwin-rebuild switch --flake ~/dotfiles#; exec zsh -l"
+alias "darwin-switch-home"="sudo darwin-rebuild switch --flake ~/dotfiles#carbon; exec zsh -l"
+alias "darwin-switch-work"="sudo darwin-rebuild switch --flake ~/dotfiles/#neon; exec zsh -l"
 alias nix-update="pushd ~/dotfiles; nix --extra-experimental-features 'flakes nix-command' flake update; popd"
-alias "nix-switch"="sudo nixos-rebuild switch --flake ~/dotfiles# --impure; source ~/.config/zsh/.zshrc"
-alias refresh="source ~/.config/zsh/.zshrc"
+alias "nix-switch"="sudo nixos-rebuild switch --flake ~/dotfiles# --impure; exec zsh -l"
+alias refresh="exec zsh -l"
 
 # Shell integrations
 eval "$(fzf --zsh)"
