@@ -36,7 +36,7 @@ in {
     lsfg-vk
     lsfg-vk-ui
     # lutris
-    makemkv
+    # makemkv
     mangohud
     melonds
     mise
