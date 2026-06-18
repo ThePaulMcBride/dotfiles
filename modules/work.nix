@@ -11,6 +11,8 @@
   ];
 
   homebrew = {
+    taps = [ "schpet/tap" ];
+
     brews = [
       "circleci"
       "coreutils"
@@ -39,7 +41,6 @@
       "google-chrome"
       "gcloud-cli"
       "linear"
-      "schpet/tap/linear"
     ];
   };
 
