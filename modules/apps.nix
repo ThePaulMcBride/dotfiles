@@ -40,6 +40,16 @@
     environment.variables.HOMEBREW_NO_ANALYTICS = "1";
     environment.variables.HOMEBREW_NO_ENV_HINTS = "1";
 
+    # Brew 6 enforces tap trust by default. Since `homebrew.taps` in this
+    # config IS the trust assertion (git-reviewed), skip the redundant check
+    # so taps don't have to be listed in two places.
+    # FORCE_INSTALL_CLEANUP skips the interactive y/n prompt that
+    # `brew bundle --cleanup` shows on every darwin-rebuild.
+    environment.etc."homebrew/brew.env".text = ''
+      HOMEBREW_NO_REQUIRE_TAP_TRUST=1
+      HOMEBREW_BUNDLE_FORCE_INSTALL_CLEANUP=1
+    '';
+
     homebrew = {
       enable = true;
 
