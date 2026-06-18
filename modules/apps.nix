@@ -61,11 +61,8 @@
 
       masApps = { };
 
-      taps = [ "marcus/tap" ];
-
       brews = [
         "bacon"
-        "marcus/tap/td"
         "mise"
         "gh"
         "k9s"
