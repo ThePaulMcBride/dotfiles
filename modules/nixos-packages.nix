@@ -22,6 +22,7 @@ in {
     fzf
     gearlever
     gcc
+    gh
     ghostty
     go
     git
