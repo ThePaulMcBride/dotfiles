@@ -8,13 +8,7 @@
         enable = true;
       };
     };
-    desktopManager.gnome = {
-      enable = true;
-      extraGSettingsOverrides = ''
-        [org.gnome.mutter]
-        experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling']
-      '';
-    };
+    desktopManager.gnome.enable = true;
   };
   programs.hyprland.enable = true;
 }

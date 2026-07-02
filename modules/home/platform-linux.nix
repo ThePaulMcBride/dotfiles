@@ -4,6 +4,12 @@
     ./profile.nix
   ];
 
+  dconf.settings = {
+    "org/gnome/desktop/screensaver" = {
+      lock-enabled = false;
+    };
+  };
+
   home.homeDirectory = "/home/${config.home.username}";
 
   home.sessionVariables = {
