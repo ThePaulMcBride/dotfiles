@@ -22,6 +22,7 @@
   programs.nix-ld.enable = true;
 
   networking.hostName = "argon"; # Define your hostname.
+  networking.interfaces.eno1.wakeOnLan.enable = true;
   # Enables wireless support via wpa_supplicant.
   # networking.wireless.enable = true;
 
