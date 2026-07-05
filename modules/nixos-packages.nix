@@ -2,8 +2,8 @@
 let
   eden-emulator = pkgs.callPackage ../pkgs/eden-emulator.nix { };
   zelda64recomp = pkgs.callPackage ../pkgs/zelda64recomp.nix { };
-  nvd-gen-diff =
-    pkgs.writeShellScriptBin "nvd-gen-diff" (builtins.readFile ../scripts/nvd-gen-diff.sh);
+  nvd-gen-diff = pkgs.writeShellScriptBin "nvd-gen-diff"
+    (builtins.readFile ../scripts/nvd-gen-diff.sh);
 in {
   environment.systemPackages = with pkgs; [
     adwsteamgtk
@@ -68,11 +68,10 @@ in {
   programs.zsh.enable = true;
   programs.steam = {
     enable = true;
-    extest.enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
-    extraPackages = with pkgs; [ hidapi ];
+    extraPackages = with pkgs; [ hidapi proton-ge-bin ];
   };
   programs.gamemode.enable = true;
   programs._1password.enable = true;

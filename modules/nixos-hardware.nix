@@ -17,7 +17,11 @@
 
   hardware = {
     enableAllFirmware = true;
-    graphics = { enable = true; };
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [ libva-vdpau-driver libvdpau-va-gl ];
+    };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
