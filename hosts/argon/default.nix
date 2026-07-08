@@ -11,6 +11,7 @@
     ../../modules/syncthing.nix
     ../../modules/fonts.nix
     ../../modules/gnome.nix
+    ../../modules/kde.nix
     ../../modules/gc.nix
     ../../modules/openrgb.nix
     ../../modules/niri.nix
@@ -54,7 +55,7 @@
   users.users.paul = {
     isNormalUser = true;
     description = "Paul McBride";
-    extraGroups = [ "networkmanager" "wheel" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "uinput" ];
   };
 
   # This value determines the NixOS release from which the default
