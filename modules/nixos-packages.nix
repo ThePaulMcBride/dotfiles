@@ -46,6 +46,7 @@ in {
     nodejs
     nvd
     nvd-gen-diff
+    obsidian
     ollama
     opencode
     transmission_4-gtk
