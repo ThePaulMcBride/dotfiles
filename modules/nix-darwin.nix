@@ -66,7 +66,7 @@
           "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
           "/Applications/Slack.app"
-          "/Applications/Asana.app"
+          "/Applications/Linear.app"
           "/Applications/Obsidian.app"
         ];
       };
