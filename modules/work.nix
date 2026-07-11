@@ -8,6 +8,7 @@
     opencode
     kubectl
     kubectx
+    (writeShellScriptBin "standup" (builtins.readFile ../scripts/standup.sh))
   ];
 
   homebrew = {
