@@ -9,6 +9,7 @@
     "ruby-lsp@claude-plugins-official": true
   },
   "skipAutoPermissionPrompt": true,
+  "preferredNotifChannel": "ghostty",
   "attribution": {
     "commit": "",
     "pr": ""
