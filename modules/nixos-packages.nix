@@ -9,7 +9,7 @@ in {
     adwsteamgtk
     alsa-scarlett-gui
     appimage-run
-    azahar
+    # azahar
     bat
     brave
     cemu
@@ -20,7 +20,7 @@ in {
     fastfetch
     fluxcd
     fzf
-    gearlever
+    # gearlever
     gcc
     gh
     ghostty
