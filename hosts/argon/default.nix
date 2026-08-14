@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }: {
+{ lib, pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos-hardware.nix
@@ -24,6 +24,7 @@
 
   networking.hostName = "argon"; # Define your hostname.
   networking.interfaces.eno1.wakeOnLan.enable = true;
+  services.displayManager.defaultSession = lib.mkForce "plasma";
   # Enables wireless support via wpa_supplicant.
   # networking.wireless.enable = true;
 
