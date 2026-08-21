@@ -9,7 +9,7 @@ in {
     adwsteamgtk
     alsa-scarlett-gui
     appimage-run
-    # azahar
+    azahar
     bat
     brave
     cemu
@@ -53,7 +53,7 @@ in {
     rustup
     starship
     steam-rom-manager
-    stremio-linux-shell
+    # stremio-linux-shell
     talosctl
     thunderbird
     unzip

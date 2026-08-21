@@ -2,7 +2,19 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+let
+  azaharOverlay = final: prev: {
+    azahar = prev.azahar.overrideAttrs (_: {
+      version = "2126.0";
+      src = prev.fetchurl {
+        url = "https://github.com/azahar-emu/azahar/releases/download/2126.0/azahar-unified-source-2126.0.tar.xz";
+        hash = "sha256-wnZEc/pGX4jzuMkO/VazqgpiRJGaSXQu60B/5CvYaag=";
+      };
+      sourceRoot = "azahar-unified-source-2126.0";
+    });
+  };
+in {
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos-hardware.nix
@@ -21,6 +33,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.nix-ld.enable = true;
+  nixpkgs.overlays = [ azaharOverlay ];
 
   networking.hostName = "argon"; # Define your hostname.
   networking.interfaces.eno1.wakeOnLan.enable = true;
