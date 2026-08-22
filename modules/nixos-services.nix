@@ -6,7 +6,7 @@ in {
     session = lib.mkOption {
       type = lib.types.enum [ "plasma" "gnome" ];
       default = "plasma";
-      description = "Primary Linux desktop session.";
+      description = "Default Linux desktop session.";
     };
   };
 
@@ -82,7 +82,11 @@ in {
         displayManager.gdm.enable = true;
         displayManager.defaultSession = lib.mkForce cfg.session;
         desktopManager.gnome.enable = true;
+        desktopManager.plasma6.enable = true;
       };
+
+      programs.ssh.askPassword =
+        lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
 
       hardware.uinput.enable = true;
 
@@ -91,12 +95,5 @@ in {
       # Enable networking
       networking.networkmanager.enable = true;
     }
-
-    (lib.mkIf (cfg.session == "plasma") {
-      services.desktopManager.plasma6.enable = true;
-
-      programs.ssh.askPassword =
-        lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
-    })
   ];
 }
