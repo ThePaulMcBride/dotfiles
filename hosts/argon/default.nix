@@ -22,11 +22,8 @@ in {
     ../../modules/nixos-packages.nix
     ../../modules/syncthing.nix
     ../../modules/fonts.nix
-    ../../modules/gnome.nix
-    ../../modules/kde.nix
     ../../modules/gc.nix
     ../../modules/openrgb.nix
-    ../../modules/niri.nix
     ../../modules/docker.nix
     ../../modules/home-manager.nix
   ];
@@ -35,9 +32,10 @@ in {
   programs.nix-ld.enable = true;
   nixpkgs.overlays = [ azaharOverlay ];
 
+  dotfiles.desktop.session = "plasma";
+
   networking.hostName = "argon"; # Define your hostname.
   networking.interfaces.eno1.wakeOnLan.enable = true;
-  services.displayManager.defaultSession = lib.mkForce "plasma";
   # Enables wireless support via wpa_supplicant.
   # networking.wireless.enable = true;
 
