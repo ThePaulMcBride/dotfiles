@@ -75,5 +75,16 @@
           modules = [ ./hosts/neon ];
         };
       };
+
+      checks = {
+        x86_64-linux = {
+          argon = self.nixosConfigurations.argon.config.system.build.toplevel;
+        };
+
+        aarch64-darwin = {
+          carbon = self.darwinConfigurations.carbon.system;
+          neon = self.darwinConfigurations.neon.system;
+        };
+      };
     };
 }
