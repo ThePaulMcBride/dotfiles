@@ -2,7 +2,7 @@
   catppuccin,
   home-manager,
   specialArgs,
-  username,
+  user,
   ...
 }:
 {
@@ -13,7 +13,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.extraSpecialArgs = specialArgs;
-  home-manager.users.${username} = {
+  home-manager.users.${user.name} = {
     imports = [
       ../modules/catppuccin.nix
       ../modules/home/platform-darwin.nix

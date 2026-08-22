@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, user, ... }:
 {
 
   environment.systemPackages = with pkgs; [
@@ -46,8 +46,8 @@
   };
 
   system.activationScripts.helmDiff.text = ''
-    if [ -x /opt/homebrew/bin/helm ] && ! sudo -u ${username} /opt/homebrew/bin/helm plugin list | ${pkgs.gnugrep}/bin/grep -q '^diff[[:space:]]'; then
-      sudo -u ${username} /opt/homebrew/bin/helm plugin install --verify=false https://github.com/databus23/helm-diff
+    if [ -x /opt/homebrew/bin/helm ] && ! sudo -u ${user.name} /opt/homebrew/bin/helm plugin list | ${pkgs.gnugrep}/bin/grep -q '^diff[[:space:]]'; then
+      sudo -u ${user.name} /opt/homebrew/bin/helm plugin install --verify=false https://github.com/databus23/helm-diff
     fi
   '';
 

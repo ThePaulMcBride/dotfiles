@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, user, ... }:
 {
   imports = [
     ./profile.nix
@@ -10,7 +10,7 @@
     };
   };
 
-  home.homeDirectory = "/home/${config.home.username}";
+  home.homeDirectory = user.homeDirectory;
 
   home.sessionVariables = {
     SSH_AUTH_SOCK = "$HOME/.1password/agent.sock";

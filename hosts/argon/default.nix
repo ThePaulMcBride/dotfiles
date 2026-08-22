@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ lib, pkgs, ... }:
+{ pkgs, user, ... }:
 let
   azaharOverlay = final: prev: {
     azahar = prev.azahar.overrideAttrs (_: {
@@ -66,9 +66,9 @@ in {
   users.defaultUserShell = pkgs.zsh;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.paul = {
+  users.users.${user.name} = {
     isNormalUser = true;
-    description = "Paul McBride";
+    description = user.fullName;
     extraGroups = [ "networkmanager" "wheel" "input" "uinput" ];
   };
 

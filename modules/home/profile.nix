@@ -1,4 +1,4 @@
-{ config, username, ... }:
+{ config, user, ... }:
 let
   dotfilesDir = ../../dotfiles;
   repoDotfilesDir = "${config.home.homeDirectory}/dotfiles/dotfiles";
@@ -7,7 +7,7 @@ let
   repoLink = rel: config.lib.file.mkOutOfStoreSymlink "${repoDotfilesDir}/${rel}";
 in
 {
-  home.username = username;
+  home.username = user.name;
   home.stateVersion = "24.05";
 
   programs.home-manager.enable = true;

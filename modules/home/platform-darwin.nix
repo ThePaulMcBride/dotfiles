@@ -1,10 +1,10 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, user, ... }:
 {
   imports = [
     ./profile.nix
   ];
 
-  home.homeDirectory = "/Users/${username}";
+  home.homeDirectory = user.homeDirectory;
 
   home.packages = with pkgs; [
     (writeShellScriptBin "kd" (builtins.readFile ../../scripts/kd.sh))

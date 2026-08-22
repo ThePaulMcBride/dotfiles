@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 let
   eden-emulator = pkgs.callPackage ../pkgs/eden-emulator.nix { };
   zelda64recomp = pkgs.callPackage ../pkgs/zelda64recomp.nix { };
@@ -78,7 +78,7 @@ in {
   programs._1password.enable = true;
   programs._1password-gui = {
     enable = true;
-    polkitPolicyOwners = [ "paul" ];
+    polkitPolicyOwners = [ user.name ];
   };
 
   hardware = { steam-hardware = { enable = true; }; };

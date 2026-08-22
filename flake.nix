@@ -37,17 +37,22 @@
       ...
     }:
     let
-      username = "paul";
-      useremail = "hello@paulmcbride.com";
-
-      specialArgs = inputs // {
-        inherit username useremail;
-      };
+      mkUser = homeRoot:
+        let
+          name = "paul";
+        in {
+          inherit name;
+          fullName = "Paul McBride";
+          email = "hello@paulmcbride.com";
+          homeDirectory = "${homeRoot}/${name}";
+        };
     in
     {
       nixosConfigurations = {
         "argon" = nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
+          specialArgs = inputs // {
+            user = mkUser "/home";
+          };
           system = "x86_64-linux";
           modules = [ ./hosts/argon ];
         };
@@ -55,13 +60,17 @@
 
       darwinConfigurations = {
         "carbon" = darwin.lib.darwinSystem {
-          inherit specialArgs;
+          specialArgs = inputs // {
+            user = mkUser "/Users";
+          };
           system = "aarch64-darwin";
           modules = [ ./hosts/carbon ];
         };
 
         "neon" = darwin.lib.darwinSystem {
-          inherit specialArgs;
+          specialArgs = inputs // {
+            user = mkUser "/Users";
+          };
           system = "aarch64-darwin";
           modules = [ ./hosts/neon ];
         };
