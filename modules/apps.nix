@@ -29,6 +29,7 @@
       starship
       stripe-cli
       tree-sitter
+      tuicr
       yazi
       zellij
       zoxide
