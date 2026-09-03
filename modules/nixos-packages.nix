@@ -26,7 +26,7 @@ in {
     ghostty
     go
     git
-    # handbrake
+    handbrake
     helix
     jujutsu
     just
@@ -36,8 +36,8 @@ in {
     lact
     lsfg-vk
     lsfg-vk-ui
-    # lutris
-    # makemkv
+    lutris
+    makemkv
     mangohud
     melonds
     mise
