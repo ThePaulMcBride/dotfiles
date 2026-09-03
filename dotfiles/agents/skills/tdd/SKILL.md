@@ -42,6 +42,8 @@ RIGHT (vertical):
 
 ## Workflow
 
+**Pause after every round.** Code generation must never move faster than the user's understanding. After each RED→GREEN (and any refactor), stop and wait for explicit go-ahead before starting the next round — don't queue up multiple rounds of work in one pass. Commits stay bite-sized: one round is usually one commit (or two, if red and green are committed separately).
+
 ### 1. Planning
 
 When exploring the codebase, use the project's domain glossary so that test names and interface vocabulary match the project's language, and respect ADRs in the area you're touching.
@@ -70,6 +72,8 @@ GREEN: Write minimal code to pass → test passes
 
 This is your tracer bullet - proves the path works end-to-end.
 
+**Stop here.** Show the user the failing test + run output, then the passing test + run output. Wait for them to say "next round" or redirect before writing another test.
+
 ### 3. Incremental Loop
 
 For each remaining behavior:
@@ -85,6 +89,7 @@ Rules:
 - Only enough code to pass current test
 - Don't anticipate future tests
 - Keep tests focused on observable behavior
+- Stop after each RED→GREEN pair; show the diff and run output, then wait for the user's go-ahead before the next test
 
 ### 4. Refactor
 
