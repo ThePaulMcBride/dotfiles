@@ -5,15 +5,7 @@
 { pkgs, user, ... }: {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/nixos-hardware.nix
-    ../../modules/nixos-services.nix
-    ../../modules/nixos-packages.nix
-    ../../modules/syncthing.nix
-    ../../modules/fonts.nix
-    ../../modules/gc.nix
-    ../../modules/openrgb.nix
-    ../../modules/docker.nix
-    ../../modules/home-manager.nix
+    ../../modules/host-profiles/nixos-desktop.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
