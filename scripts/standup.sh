@@ -7,7 +7,7 @@
 
 set -euo pipefail
 
-JOURNEYS=(eric guy james kerry mindy nick paul rya)
+JOURNEYS=(blaine eric guy james kerry mindy nick paul rya)
 
 interactive=false
 remove=()
