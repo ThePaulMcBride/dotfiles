@@ -39,6 +39,7 @@
 
     casks = [
       "asana"
+      "claude"
       "google-chrome"
       "gcloud-cli"
       "linear"
