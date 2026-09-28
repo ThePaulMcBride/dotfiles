@@ -42,7 +42,7 @@ RIGHT (vertical):
 
 ## Workflow
 
-**Pause after every round.** Code generation must never move faster than the user's understanding. After each RED→GREEN (and any refactor), stop and wait for explicit go-ahead before starting the next round — don't queue up multiple rounds of work in one pass. Commits stay bite-sized: one round is usually one commit (or two, if red and green are committed separately).
+Complete each RED→GREEN round before you start the next round. Report useful results as brief checkpoints, then continue without waiting for approval.
 
 ### 1. Planning
 
@@ -50,16 +50,16 @@ When exploring the codebase, use the project's domain glossary so that test name
 
 Before writing any code:
 
-- [ ] Confirm with user what interface changes are needed
-- [ ] Confirm with user which behaviors to test (prioritize)
+- [ ] Determine the required interface from the task and repository evidence
+- [ ] Prioritize behaviors from the task, existing tests, and production risk
 - [ ] Identify opportunities for [deep modules](deep-modules.md) (small interface, deep implementation)
 - [ ] Design interfaces for [testability](interface-design.md)
 - [ ] List the behaviors to test (not implementation steps)
-- [ ] Get user approval on the plan
+- [ ] Ask only if an unresolved interface choice is difficult or expensive to reverse
 
-Ask: "What should the public interface look like? Which behaviors are most important to test?"
+If repository evidence resolves the interface and behavior priorities, continue without a question.
 
-**You can't test everything.** Confirm with the user exactly which behaviors matter most. Focus testing effort on critical paths and complex logic, not every possible edge case.
+**You cannot test everything.** Focus testing effort on critical paths and complex logic, not every possible edge case.
 
 ### 2. Tracer Bullet
 
@@ -72,7 +72,7 @@ GREEN: Write minimal code to pass → test passes
 
 This is your tracer bullet - proves the path works end-to-end.
 
-**Stop here.** Show the user the failing test + run output, then the passing test + run output. Wait for them to say "next round" or redirect before writing another test.
+Report the failing and passing results at a useful checkpoint. Then continue to the next behavior unless the user redirects the work.
 
 ### 3. Incremental Loop
 
@@ -89,7 +89,7 @@ Rules:
 - Only enough code to pass current test
 - Don't anticipate future tests
 - Keep tests focused on observable behavior
-- Stop after each RED→GREEN pair; show the diff and run output, then wait for the user's go-ahead before the next test
+- Complete and inspect each RED→GREEN pair before you start the next test
 
 ### 4. Refactor
 

@@ -13,6 +13,7 @@ in
   programs.home-manager.enable = true;
 
   home.file = {
+    ".claude/CLAUDE.md".source = sourceFile "agents/coding-workflow.md";
     ".claude/settings.json".source = sourceFile "claude/settings.json";
     ".config/alacritty".source = sourceFile "alacritty";
     ".config/git".source = sourceFile "git";
@@ -26,10 +27,12 @@ in
     ".config/zsh/path".source = sourceFile "zsh/path";
     ".config/helix".source = sourceFile "helix";
     ".config/opencode/opencode.json".source = sourceFile "opencode/opencode.json";
+    ".config/opencode/AGENTS.md".source = sourceFile "agents/coding-workflow.md";
     ".config/opencode/agents".source = repoLink "opencode/agents";
     ".config/opencode/skills".source = repoLink "opencode/skills";
     ".config/opencode/rules".source = repoLink "opencode/rules";
     ".pi/agent/settings.json".source = sourceFile "pi/agent/settings.json";
+    ".pi/agent/APPEND_SYSTEM.md".source = sourceFile "agents/coding-workflow.md";
     ".pi/agent/extensions".source = repoLink "pi/agent/extensions";
     ".agents/skills".source = repoLink "agents/skills";
   };
