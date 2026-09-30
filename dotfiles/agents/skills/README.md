@@ -16,3 +16,4 @@ Current skills:
 - `debug-repro`
 - `code-review`
 - `commit-prep`
+- `tuicr`
