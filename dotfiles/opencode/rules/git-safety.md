@@ -1,5 +1,6 @@
 # Git Safety
 
-- Never run `git commit` or `git push` without first asking for confirmation
-- When ready to commit, show me the staged changes and proposed commit message, then wait for approval
-- When ready to push, tell me which branch and remote you're pushing to, then wait for approval
+- Run `git commit` or `git push` only when the user explicitly requests it.
+- Treat an explicit request in the current conversation as authorization. Do not request a second confirmation.
+- Before a commit, inspect the diff and propose a scope-first message by following the `commit-prep` skill.
+- Before a push, state the branch, remote, and whether the update is a normal or force push.

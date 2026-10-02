@@ -7,9 +7,9 @@ description: Safe workflow rules for git commits, pushes, and other write operat
 
 Follow these rules whenever git write operations are involved.
 
-## Required confirmations
+## Required Authorization
 
-Always ask for confirmation before running any of these:
+Run these commands only when the user explicitly requests them:
 
 - `git commit`
 - `git push`
@@ -18,17 +18,20 @@ Always ask for confirmation before running any of these:
 - `git checkout` that would discard work
 - `git stash` when it may hide or alter in-progress work
 
+Treat an explicit request in the current conversation as authorization. Do not request a second confirmation unless the target or contents remain materially ambiguous.
+
 ## Before committing
 
 1. Show the relevant diff or a concise summary of what will be committed.
-2. Propose a commit message.
-3. Wait for explicit approval.
+2. Load and follow the `commit-prep` skill.
+3. Propose a scope-first commit message.
+4. If the user already requested the commit, proceed without another approval step.
 
 ## Before pushing
 
 1. State the remote and branch.
 2. Mention whether the push is expected to create, update, or force-update the remote branch.
-3. Wait for explicit approval.
+3. If the user already requested the push, proceed without another approval step.
 
 ## General guidance
 
