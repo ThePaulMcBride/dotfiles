@@ -6,5 +6,6 @@ macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = hidden
 window-decoration = auto
 command = /run/current-system/sw/bin/zsh
+keybind = shift+backspace=csi:3~
 
 config-file = ?linux-config
