@@ -40,6 +40,7 @@
     environment.variables.EDITOR = "nvim";
     environment.variables.HOMEBREW_NO_ANALYTICS = "1";
     environment.variables.HOMEBREW_NO_ENV_HINTS = "1";
+    environment.variables.OPENTUI_NOTIFICATION_PROTOCOL = "osc9";
 
     # Brew 6 enforces tap trust by default. Since `homebrew.taps` in this
     # config IS the trust assertion (git-reviewed), skip the redundant check
