@@ -3,6 +3,7 @@
   "theme": {
     "name": "catppuccin-macchiato"
   },
+  "plugins": ["-opencode.notifications"],
   "attention": {
     "notifications": true,
     "sound": true,

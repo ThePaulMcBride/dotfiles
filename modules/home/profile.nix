@@ -30,6 +30,7 @@ in
     ".config/opencode/opencode.json".source = sourceFile "opencode/opencode.json";
     ".config/opencode/AGENTS.md".source = sourceFile "agents/coding-workflow.md";
     ".config/opencode/agents".source = repoLink "opencode/agents";
+    ".config/opencode/plugins".source = repoLink "opencode/plugins";
     ".config/opencode/skills".source = repoLink "opencode/skills";
     ".config/opencode/rules".source = repoLink "opencode/rules";
     ".pi/agent/settings.json".source = sourceFile "pi/agent/settings.json";
