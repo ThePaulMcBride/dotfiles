@@ -37,3 +37,6 @@ Session.vim
 # mise local overrides
 mise.local.toml
 .mise.local.toml
+
+# Local agent planning files
+.scratch/

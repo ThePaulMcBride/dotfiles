@@ -43,7 +43,7 @@
 [rebase]
   updateRefs = true
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/ignore_global
   editor = nvim
   ignorecase = false
 [user]
