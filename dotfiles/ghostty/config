@@ -2,6 +2,7 @@ theme = catppuccin-macchiato
 font-size = 16
 font-family = JetBrainsMono Nerd Font
 title = " "
+desktop-notifications = true
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = hidden
 window-decoration = auto

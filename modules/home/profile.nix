@@ -26,6 +26,7 @@ in
     ".config/zsh/.zshrc".source = sourceFile "zsh/.zshrc";
     ".config/zsh/path".source = sourceFile "zsh/path";
     ".config/helix".source = sourceFile "helix";
+    ".config/opencode/cli.json".source = sourceFile "opencode/cli.json";
     ".config/opencode/opencode.json".source = sourceFile "opencode/opencode.json";
     ".config/opencode/AGENTS.md".source = sourceFile "agents/coding-workflow.md";
     ".config/opencode/agents".source = repoLink "opencode/agents";
