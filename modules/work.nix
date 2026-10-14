@@ -5,7 +5,6 @@
     capnproto
     claude-code
     helmfile
-    opencode
     kubectl
     kubectx
     (writeShellScriptBin "standup" (builtins.readFile ../scripts/standup.sh))
@@ -26,6 +25,7 @@
       "libyaml"
       "linear"
       "nvm"
+      "opencode"
       "parallel"
       "pi-coding-agent"
       "pkgconf"
@@ -38,7 +38,6 @@
     ];
 
     casks = [
-      "asana"
       "claude"
       "google-chrome"
       "gcloud-cli"

@@ -108,10 +108,6 @@ Some tools require API keys or tokens that should not be committed to git.
 Create a secrets file at `~/.config/zsh/secrets`:
 
 ```sh
-# Asana Personal Access Token
-# Get yours at: https://app.asana.com/0/my-apps
-export ASANA_ACCESS_TOKEN="your-token-here"
-
 # Obsidian vault path (used by the Obsidian MCP server)
 export OBSIDIAN_VAULT_PATH=""
 ```

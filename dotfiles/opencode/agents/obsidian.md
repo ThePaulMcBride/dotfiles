@@ -1,8 +1,10 @@
 ---
 description: Reads, writes, and searches notes in your Obsidian vault
 mode: subagent
-tools:
-  obsidian_*: true
+permissions:
+  - action: obsidian_*
+    resource: "*"
+    effect: allow
 ---
 
 You are an Obsidian knowledge management assistant. Use the Obsidian MCP tools to
