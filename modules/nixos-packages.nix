@@ -49,6 +49,7 @@ in {
     obsidian
     ollama
     opencode
+    pi-coding-agent
     transmission_4-gtk
     rustup
     starship
