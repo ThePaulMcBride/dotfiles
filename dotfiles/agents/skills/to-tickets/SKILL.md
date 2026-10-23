@@ -37,6 +37,32 @@ Break the work into **tracer bullet** tickets.
 
 Give each ticket its **blocking edges**: the other tickets that must complete before it can start. A ticket with no blockers can start immediately.
 
+<ticket-writing-standard>
+
+Write ticket text in Simple English. Use short sentences, active voice, and one
+term for each concept. Keep every section as brief as possible without removing
+information that a person needs to start the work.
+
+Use this structure:
+
+- **Current problem:** State the missing or incorrect behavior and why it
+  matters. Use one short paragraph.
+- **What to build:** Describe the complete task. Name the product or service,
+  the behavior to add or change, the important boundary, and the expected
+  result. A person familiar with the codebase must understand the task without
+  reading the acceptance criteria.
+- **Acceptance criteria:** Make the task verifiable. Add contract details,
+  preserved behavior, errors, and tests. Do not introduce essential scope that
+  is absent from **What to build**.
+
+Keep **What to build** to two to five short sentences when possible. Do not use
+it for a layer-by-layer plan or repeat every acceptance criterion.
+
+Before review or publication, read only the title and **What to build**. Rewrite
+the section if the task, boundary, or result is unclear.
+
+</ticket-writing-standard>
+
 **Wide refactors are the exception to vertical slicing.** A **wide refactor** is one mechanical change (rename a column, retype a shared symbol) whose **blast radius** fans across the whole codebase, so a single edit breaks thousands of call sites at once and no vertical slice can land green. Don't force it into a tracer bullet; sequence it as **expand–contract**. First expand: add the new form beside the old so nothing breaks. Then migrate the call sites over in batches sized by blast radius (per package, per directory), each batch its own ticket blocked by the expand, keeping CI green batch to batch because the old form still exists. Finally contract: delete the old form once no caller remains, in a ticket blocked by every migrate batch. When even the batches can't stay green alone, keep the sequence but let them share an integration branch that all block a final integrate-and-verify ticket; green is promised only there.
 
 ### 4. Quiz the user
@@ -70,11 +96,20 @@ Do NOT close or modify any parent issue.
 
 # <NN>: <Ticket title>
 
-**What to build:** the end-to-end behaviour this ticket makes work, from the user's perspective, not a layer-by-layer implementation list.
+## Current problem
+
+<The missing or incorrect behavior and why it matters.>
+
+## What to build
+
+<A brief, stand-alone description of the complete task, its boundary, and its
+result.>
 
 **Blocked by:** the numbers/titles of the tickets that gate this one, or "None (can start immediately)".
 
 **Status:** ready-for-agent
+
+## Acceptance criteria
 
 - [ ] Acceptance criterion 1
 - [ ] Acceptance criterion 2
@@ -87,9 +122,14 @@ Do NOT close or modify any parent issue.
 
 A reference to the parent issue on the tracker (if the source was an existing issue, otherwise omit this section).
 
+## Current problem
+
+The missing or incorrect behavior and why it matters.
+
 ## What to build
 
-The end-to-end behaviour this ticket makes work, from the user's perspective, not layer-by-layer implementation.
+A brief, stand-alone description of the complete task, its boundary, and its
+result.
 
 ## Acceptance criteria
 
