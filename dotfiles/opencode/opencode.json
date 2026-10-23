@@ -14,6 +14,14 @@
           "@mauricio.wolff/mcp-obsidian@latest",
           "{env:OBSIDIAN_VAULT_PATH}"
         ]
+      },
+      "onesignal_staging": {
+        "type": "remote",
+        "url": "https://api.staging.onesignal.com/mcp/oauth"
+      },
+      "onesignal_production": {
+        "type": "remote",
+        "url": "https://api.onesignal.com/mcp/oauth"
       }
     }
   },

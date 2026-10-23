@@ -34,6 +34,7 @@ in
     ".config/opencode/skills".source = repoLink "opencode/skills";
     ".config/opencode/rules".source = repoLink "opencode/rules";
     ".pi/agent/settings.json".source = sourceFile "pi/agent/settings.json";
+    ".pi/agent/mcp.json".source = sourceFile "pi/agent/mcp.json";
     ".pi/agent/APPEND_SYSTEM.md".source = sourceFile "agents/coding-workflow.md";
     ".pi/agent/extensions".source = repoLink "pi/agent/extensions";
     ".agents/skills".source = repoLink "agents/skills";

@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "linear": {
+      "url": "https://mcp.linear.app/mcp",
+      "description": "Manage Linear issues, projects, and workflows."
+    },
+    "obsidian": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mauricio.wolff/mcp-obsidian@latest",
+        "${OBSIDIAN_VAULT_PATH}"
+      ],
+      "description": "Read, write, and search the configured Obsidian vault."
+    },
+    "onesignal_staging": {
+      "url": "https://api.staging.onesignal.com/mcp/oauth",
+      "description": "Test OneSignal MCP changes against the staging environment."
+    },
+    "onesignal_production": {
+      "url": "https://api.onesignal.com/mcp/oauth",
+      "description": "Use the OneSignal production environment; avoid mutations unless explicitly requested."
+    }
+  }
+}
