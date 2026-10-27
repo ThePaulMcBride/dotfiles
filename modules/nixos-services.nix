@@ -18,6 +18,11 @@ in {
           nssmdns4 = true;
           nssmdns6 = true;
           openFirewall = true;
+          settings.publish = {
+            "disable-publishing" = false;
+            disable-user-service-publishing = false;
+            publish-addresses = true;
+          };
         };
 
         udev.packages = with pkgs; [ game-devices-udev-rules gnome-settings-daemon ];
