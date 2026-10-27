@@ -26,7 +26,7 @@ in {
     ghostty
     go
     git
-    handbrake
+    # handbrake # Temporarily disabled: its FFmpeg patch fails against the locked Nixpkgs version.
     helix
     jujutsu
     just

@@ -18,6 +18,11 @@ in {
           nssmdns4 = true;
           nssmdns6 = true;
           openFirewall = true;
+          # Sunshine still sets these obsolete options with mkDefault.
+          publish = {
+            enable = null;
+            userServices = null;
+          };
           settings.publish = {
             "disable-publishing" = false;
             disable-user-service-publishing = false;
