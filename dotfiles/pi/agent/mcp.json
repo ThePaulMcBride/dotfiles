@@ -20,6 +20,10 @@
     "onesignal_production": {
       "url": "https://api.onesignal.com/mcp/oauth",
       "description": "Use the OneSignal production environment; avoid mutations unless explicitly requested."
+    },
+    "onesignal_internal_portal": {
+      "url": "https://internal-mcp.onesignal.io/mcp",
+      "description": "Search internal OneSignal documentation and inspect Grafana observability data."
     }
   }
 }

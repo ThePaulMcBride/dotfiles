@@ -22,6 +22,10 @@
       "onesignal_production": {
         "type": "remote",
         "url": "https://api.onesignal.com/mcp/oauth"
+      },
+      "onesignal_internal_portal": {
+        "type": "remote",
+        "url": "https://internal-mcp.onesignal.io/mcp"
       }
     }
   },
