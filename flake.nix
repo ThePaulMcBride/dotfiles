@@ -48,6 +48,8 @@
         };
     in
     {
+      packages.x86_64-linux.lichii = nixpkgs.legacyPackages.x86_64-linux.callPackage ./pkgs/lichii.nix { };
+
       nixosConfigurations = {
         "argon" = nixpkgs.lib.nixosSystem {
           specialArgs = inputs // {

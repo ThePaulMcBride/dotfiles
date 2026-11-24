@@ -1,6 +1,7 @@
 { pkgs, user, ... }:
 let
   eden-emulator = pkgs.callPackage ../pkgs/eden-emulator.nix { };
+  lichii = pkgs.callPackage ../pkgs/lichii.nix { };
   zelda64recomp = pkgs.callPackage ../pkgs/zelda64recomp.nix { };
   nvd-gen-diff = pkgs.writeShellScriptBin "nvd-gen-diff"
     (builtins.readFile ../scripts/nvd-gen-diff.sh);
@@ -15,6 +16,7 @@ in {
     cemu
     discord
     eden-emulator
+    lichii
     docker
     eza
     fastfetch
