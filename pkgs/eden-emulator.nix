@@ -1,11 +1,11 @@
 { stdenvNoCC, fetchurl }:
 let
   pname = "eden-emulator";
-  version = "nightly-2026-10-18-de7e6e01d4";
+  version = "nightly-2026-11-24-b5d668560b";
 
   appImageUrl =
-    "https://nightly.eden-emu.dev/v1792353251.de7e6e01d4/Eden-Linux-de7e6e01d4-amd64-clang-pgo.AppImage";
-  appImageHash = "sha256-QtC4Dhp3o4KaUfky/15Xz4cCrtyZzeh/AWfQczgK+Ug=";
+    "https://nightly.eden-emu.dev/v1795491592.b5d668560b/Eden-Linux-b5d668560b-amd64-clang-pgo.AppImage";
+  appImageHash = "sha256-yDDGwrIguMMBjYaZ+aP3PlS8muXnd8UYhR+QzK7FciI=";
 
   iconUrl = "https://eden-emu.dev/assets/logos/logo.png";
   iconHash = "sha256-Z+QpF1AX5UZKqPuBM4U1nzAbrAhr1IBhy4RApW/kLOc=";

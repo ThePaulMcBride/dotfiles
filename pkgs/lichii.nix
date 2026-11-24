@@ -7,11 +7,11 @@
 }:
 let
   pname = "lichii";
-  version = "build-130";
+  version = "build-386";
 
   src = fetchurl {
     url = "https://github.com/zortos293/Lichii/releases/download/${version}/lichii-linux-x86_64-pgo.AppImage";
-    hash = "sha256-esAwMMema0t0Ve5PRkJvwTnocAcaaWi65KZFQBt3DZs=";
+    hash = "sha256-C2jINT1P4nutvix0G0RpxnXrkTd28knvx00cik2yAiI=";
   };
 
   appimage-run = pkgs.appimage-run.override {
@@ -19,7 +19,7 @@ let
   };
 
   iconSrc = fetchurl {
-    url = "https://raw.githubusercontent.com/zortos293/Lichii/build-130/dist/branding/lichii_icon.png";
+    url = "https://raw.githubusercontent.com/zortos293/Lichii/build-386/dist/branding/lichii_icon.png";
     hash = "sha256-Sh+2AvybzCWZpU0yRzlpZ0J7Fls2rN5XEcLC+3smorg=";
   };
 in
